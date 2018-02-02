@@ -1,0 +1,14 @@
+C:\CodeAnalyzerEx
+true
+true
+true
+true
+CodeAnalyzerEx.sln
+false
+true
+false
+false
+true
+false
+false
+true

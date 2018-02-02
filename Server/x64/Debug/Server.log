@@ -1,0 +1,16 @@
+﻿  Server.cpp
+c:\codeanal-wpf 2\server\server.cpp(237): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\codeanal-wpf 2\server\server.cpp(310): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  Utilities.cpp
+  Sockets.cpp
+c:\codeanal-wpf 2\sockets\sockets.cpp(164): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\codeanal-wpf 2\sockets\sockets.cpp(203): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\codeanal-wpf 2\sockets\sockets.cpp(244): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+c:\codeanal-wpf 2\sockets\sockets.cpp(252): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  Logger.cpp
+  Cpp11-BlockingQueue.cpp
+  HttpMessage.cpp
+  FileSystem.cpp
+  正在生成代码...
+  Server.vcxproj -> C:\CodeAnal-WPF 2\x64\Debug\Server.exe
+  Server.vcxproj -> C:\CodeAnal-WPF 2\x64\Debug\Server.pdb (Partial PDB)

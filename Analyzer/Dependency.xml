@@ -1,0 +1,13 @@
+
+<graph>
+  <vertex id="0" value="DateTime.h">
+  </vertex>
+  <vertex id="1" value="NoSqlDb.h">
+    <edge targetId="0" value="edge1">
+    </edge>
+  </vertex>
+  <vertex id="3" value="NoSqlDb.cpp">
+    <edge targetId="1" value="edge2">
+    </edge>
+  </vertex>
+</graph>

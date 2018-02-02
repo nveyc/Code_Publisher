@@ -1,0 +1,473 @@
+
+<graph>
+  <vertex id="0" value="ScopeStack.h">
+    <edge targetId="1" value="edge1">
+    </edge>
+    <edge targetId="2" value="edge2">
+    </edge>
+  </vertex>
+  <vertex id="1" value="Logger.h">
+    <edge targetId="6" value="edge4">
+    </edge>
+  </vertex>
+  <vertex id="2" value="Utilities.h">
+  </vertex>
+  <vertex id="3" value="DateTime.cpp">
+    <edge targetId="4" value="edge3">
+    </edge>
+  </vertex>
+  <vertex id="4" value="DateTime.h">
+  </vertex>
+  <vertex id="6" value="Cpp11-BlockingQueue.h">
+  </vertex>
+  <vertex id="7" value="Display.h">
+    <edge targetId="8" value="edge5">
+    </edge>
+    <edge targetId="2" value="edge6">
+    </edge>
+  </vertex>
+  <vertex id="8" value="NoSqlDb.h">
+    <edge targetId="59" value="edge78">
+    </edge>
+    <edge targetId="4" value="edge79">
+    </edge>
+  </vertex>
+  <vertex id="10" value="AbstrSynTree.h">
+    <edge targetId="0" value="edge7">
+    </edge>
+    <edge targetId="12" value="edge8">
+    </edge>
+  </vertex>
+  <vertex id="12" value="itokcollection.h">
+  </vertex>
+  <vertex id="13" value="Test2.cpp">
+    <edge targetId="14" value="edge9">
+    </edge>
+  </vertex>
+  <vertex id="14" value="SemiExp.h">
+    <edge targetId="12" value="edge134">
+    </edge>
+    <edge targetId="33" value="edge135">
+    </edge>
+  </vertex>
+  <vertex id="15" value="AbstrSynTree.cpp">
+    <edge targetId="10" value="edge10">
+    </edge>
+    <edge targetId="2" value="edge11">
+    </edge>
+  </vertex>
+  <vertex id="18" value="Logger.cpp">
+    <edge targetId="1" value="edge12">
+    </edge>
+    <edge targetId="2" value="edge13">
+    </edge>
+  </vertex>
+  <vertex id="21" value="Display.cpp">
+    <edge targetId="7" value="edge14">
+    </edge>
+  </vertex>
+  <vertex id="23" value="Executive.cpp">
+    <edge targetId="1" value="edge15">
+    </edge>
+    <edge targetId="10" value="edge16">
+    </edge>
+    <edge targetId="26" value="edge17">
+    </edge>
+    <edge targetId="27" value="edge18">
+    </edge>
+    <edge targetId="28" value="edge19">
+    </edge>
+    <edge targetId="29" value="edge20">
+    </edge>
+    <edge targetId="30" value="edge21">
+    </edge>
+    <edge targetId="31" value="edge22">
+    </edge>
+    <edge targetId="32" value="edge23">
+    </edge>
+    <edge targetId="33" value="edge24">
+    </edge>
+    <edge targetId="34" value="edge25">
+    </edge>
+    <edge targetId="2" value="edge26">
+    </edge>
+  </vertex>
+  <vertex id="26" value="FileSystem.h">
+  </vertex>
+  <vertex id="27" value="ActionsAndRules.h">
+    <edge targetId="1" value="edge86">
+    </edge>
+    <edge targetId="10" value="edge87">
+    </edge>
+    <edge targetId="93" value="edge88">
+    </edge>
+    <edge targetId="26" value="edge89">
+    </edge>
+    <edge targetId="42" value="edge90">
+    </edge>
+    <edge targetId="0" value="edge91">
+    </edge>
+    <edge targetId="12" value="edge92">
+    </edge>
+    <edge targetId="14" value="edge93">
+    </edge>
+    <edge targetId="33" value="edge94">
+    </edge>
+  </vertex>
+  <vertex id="28" value="Executive.h">
+    <edge targetId="30" value="edge29">
+    </edge>
+    <edge targetId="41" value="edge30">
+    </edge>
+    <edge targetId="42" value="edge31">
+    </edge>
+    <edge targetId="2" value="edge32">
+    </edge>
+  </vertex>
+  <vertex id="29" value="DependencyAnalysis.h">
+    <edge targetId="8" value="edge41">
+    </edge>
+    <edge targetId="34" value="edge42">
+    </edge>
+  </vertex>
+  <vertex id="30" value="FileMgr.h">
+    <edge targetId="65" value="edge46">
+    </edge>
+    <edge targetId="26" value="edge47">
+    </edge>
+  </vertex>
+  <vertex id="31" value="Graph.h">
+    <edge targetId="77" value="edge54">
+    </edge>
+    <edge targetId="78" value="edge55">
+    </edge>
+  </vertex>
+  <vertex id="32" value="Publisher.h">
+    <edge targetId="8" value="edge45">
+    </edge>
+  </vertex>
+  <vertex id="33" value="Tokenizer.h">
+  </vertex>
+  <vertex id="34" value="TypeTable.h">
+    <edge targetId="59" value="edge52">
+    </edge>
+  </vertex>
+  <vertex id="36" value="DepAnal.h">
+    <edge targetId="27" value="edge27">
+    </edge>
+    <edge targetId="34" value="edge28">
+    </edge>
+  </vertex>
+  <vertex id="41" value="ConfigureParser.h">
+    <edge targetId="27" value="edge95">
+    </edge>
+    <edge targetId="42" value="edge96">
+    </edge>
+    <edge targetId="14" value="edge97">
+    </edge>
+    <edge targetId="33" value="edge98">
+    </edge>
+  </vertex>
+  <vertex id="42" value="Parser.h">
+    <edge targetId="12" value="edge104">
+    </edge>
+  </vertex>
+  <vertex id="44" value="Publisher.cpp">
+    <edge targetId="32" value="edge33">
+    </edge>
+  </vertex>
+  <vertex id="46" value="FileMgr.cpp">
+    <edge targetId="30" value="edge34">
+    </edge>
+  </vertex>
+  <vertex id="48" value="TestDpAnal.cpp">
+    <edge targetId="10" value="edge35">
+    </edge>
+    <edge targetId="26" value="edge36">
+    </edge>
+    <edge targetId="27" value="edge37">
+    </edge>
+    <edge targetId="29" value="edge38">
+    </edge>
+    <edge targetId="30" value="edge39">
+    </edge>
+    <edge targetId="34" value="edge40">
+    </edge>
+  </vertex>
+  <vertex id="58" value="CppProperties.cpp">
+    <edge targetId="59" value="edge43">
+    </edge>
+  </vertex>
+  <vertex id="59" value="CppProperties.h">
+  </vertex>
+  <vertex id="60" value="Cpp11-BlockingQueue.cpp">
+    <edge targetId="6" value="edge44">
+    </edge>
+  </vertex>
+  <vertex id="65" value="IFileMgr.h">
+  </vertex>
+  <vertex id="67" value="TestDpAnal.h">
+    <edge targetId="30" value="edge48">
+    </edge>
+    <edge targetId="41" value="edge49">
+    </edge>
+    <edge targetId="42" value="edge50">
+    </edge>
+    <edge targetId="2" value="edge51">
+    </edge>
+  </vertex>
+  <vertex id="74" value="DependencyAnalysis.cpp">
+    <edge targetId="29" value="edge53">
+    </edge>
+  </vertex>
+  <vertex id="77" value="XmlWriter.h">
+  </vertex>
+  <vertex id="78" value="XmlReader.h">
+  </vertex>
+  <vertex id="79" value="SemiExp.cpp">
+    <edge targetId="14" value="edge56">
+    </edge>
+    <edge targetId="33" value="edge57">
+    </edge>
+  </vertex>
+  <vertex id="82" value="FileSystemTest.cpp">
+    <edge targetId="26" value="edge58">
+    </edge>
+  </vertex>
+  <vertex id="84" value="FileSystem.cpp">
+    <edge targetId="26" value="edge59">
+    </edge>
+  </vertex>
+  <vertex id="86" value="XmlDocument.h">
+    <edge targetId="87" value="edge60">
+    </edge>
+  </vertex>
+  <vertex id="87" value="XmlElement.h">
+  </vertex>
+  <vertex id="88" value="TypeAnalysis.h">
+    <edge targetId="27" value="edge61">
+    </edge>
+    <edge targetId="34" value="edge62">
+    </edge>
+  </vertex>
+  <vertex id="91" value="Tokenizer.cpp">
+    <edge targetId="33" value="edge63">
+    </edge>
+  </vertex>
+  <vertex id="93" value="GrammarHelpers.h">
+    <edge targetId="12" value="edge64">
+    </edge>
+  </vertex>
+  <vertex id="95" value="XmlDocument.cpp">
+    <edge targetId="86" value="edge65">
+    </edge>
+  </vertex>
+  <vertex id="97" value="GrammarHelpers.cpp">
+    <edge targetId="1" value="edge66">
+    </edge>
+    <edge targetId="93" value="edge67">
+    </edge>
+    <edge targetId="2" value="edge68">
+    </edge>
+    <edge targetId="14" value="edge69">
+    </edge>
+  </vertex>
+  <vertex id="102" value="TypeTable.cpp">
+    <edge targetId="34" value="edge70">
+    </edge>
+  </vertex>
+  <vertex id="104" value="Graph.cpp">
+    <edge targetId="31" value="edge71">
+    </edge>
+  </vertex>
+  <vertex id="106" value="StoredProcedures.h">
+    <edge targetId="107" value="edge72">
+    </edge>
+  </vertex>
+  <vertex id="107" value="Queries.h">
+    <edge targetId="8" value="edge129">
+    </edge>
+    <edge targetId="2" value="edge130">
+    </edge>
+  </vertex>
+  <vertex id="108" value="XmlWriter.cpp">
+    <edge targetId="77" value="edge73">
+    </edge>
+  </vertex>
+  <vertex id="110" value="XmlReader.cpp">
+    <edge targetId="78" value="edge74">
+    </edge>
+  </vertex>
+  <vertex id="112" value="ScopeStack.cpp">
+    <edge targetId="0" value="edge75">
+    </edge>
+    <edge targetId="2" value="edge76">
+    </edge>
+  </vertex>
+  <vertex id="115" value="Window.cpp">
+    <edge targetId="116" value="edge77">
+    </edge>
+  </vertex>
+  <vertex id="116" value="Window.h">
+  </vertex>
+  <vertex id="120" value="NoSqlDb.cpp">
+    <edge targetId="8" value="edge80">
+    </edge>
+  </vertex>
+  <vertex id="122" value="PersistHelp.h">
+    <edge targetId="59" value="edge81">
+    </edge>
+    <edge targetId="2" value="edge82">
+    </edge>
+    <edge targetId="8" value="edge83">
+    </edge>
+    <edge targetId="86" value="edge84">
+    </edge>
+    <edge targetId="87" value="edge85">
+    </edge>
+  </vertex>
+  <vertex id="143" value="TestTypes.h">
+    <edge targetId="59" value="edge99">
+    </edge>
+    <edge targetId="2" value="edge100">
+    </edge>
+    <edge targetId="122" value="edge101">
+    </edge>
+  </vertex>
+  <vertex id="147" value="Persist.cpp">
+    <edge targetId="7" value="edge102">
+    </edge>
+    <edge targetId="149" value="edge103">
+    </edge>
+  </vertex>
+  <vertex id="149" value="Persist.h">
+    <edge targetId="181" value="edge126">
+    </edge>
+    <edge targetId="59" value="edge127">
+    </edge>
+    <edge targetId="8" value="edge128">
+    </edge>
+  </vertex>
+  <vertex id="152" value="PersistHelp.cpp">
+    <edge targetId="122" value="edge105">
+    </edge>
+    <edge targetId="2" value="edge106">
+    </edge>
+  </vertex>
+  <vertex id="155" value="ActionsAndRules.cpp">
+    <edge targetId="27" value="edge107">
+    </edge>
+  </vertex>
+  <vertex id="157" value="XmlParser.h">
+    <edge targetId="158" value="edge108">
+    </edge>
+    <edge targetId="12" value="edge109">
+    </edge>
+    <edge targetId="87" value="edge110">
+    </edge>
+  </vertex>
+  <vertex id="158" value="xmlElementParts.h">
+  </vertex>
+  <vertex id="161" value="ConfigureParser.cpp">
+    <edge targetId="27" value="edge111">
+    </edge>
+    <edge targetId="41" value="edge112">
+    </edge>
+    <edge targetId="42" value="edge113">
+    </edge>
+    <edge targetId="14" value="edge114">
+    </edge>
+    <edge targetId="33" value="edge115">
+    </edge>
+  </vertex>
+  <vertex id="167" value="TestTypeAnalysis.h">
+    <edge targetId="30" value="edge116">
+    </edge>
+    <edge targetId="41" value="edge117">
+    </edge>
+    <edge targetId="42" value="edge118">
+    </edge>
+    <edge targetId="2" value="edge119">
+    </edge>
+  </vertex>
+  <vertex id="172" value="TestTypes.cpp">
+    <edge targetId="143" value="edge120">
+    </edge>
+  </vertex>
+  <vertex id="174" value="Parser.cpp">
+    <edge targetId="27" value="edge121">
+    </edge>
+    <edge targetId="26" value="edge122">
+    </edge>
+    <edge targetId="2" value="edge123">
+    </edge>
+    <edge targetId="42" value="edge124">
+    </edge>
+    <edge targetId="41" value="edge125">
+    </edge>
+  </vertex>
+  <vertex id="181" value="XmlUtilities.h">
+    <edge targetId="2" value="edge151">
+    </edge>
+    <edge targetId="87" value="edge152">
+    </edge>
+  </vertex>
+  <vertex id="187" value="Queries.cpp">
+    <edge targetId="107" value="edge131">
+    </edge>
+    <edge targetId="7" value="edge132">
+    </edge>
+    <edge targetId="8" value="edge133">
+    </edge>
+  </vertex>
+  <vertex id="194" value="StoredProcedures.cpp">
+    <edge targetId="106" value="edge136">
+    </edge>
+  </vertex>
+  <vertex id="196" value="Test1.h">
+    <edge targetId="14" value="edge137">
+    </edge>
+  </vertex>
+  <vertex id="198" value="Test1.cpp">
+    <edge targetId="196" value="edge138">
+    </edge>
+  </vertex>
+  <vertex id="200" value="TestTypeAnalysis.cpp">
+    <edge targetId="10" value="edge139">
+    </edge>
+    <edge targetId="26" value="edge140">
+    </edge>
+    <edge targetId="27" value="edge141">
+    </edge>
+    <edge targetId="30" value="edge142">
+    </edge>
+  </vertex>
+  <vertex id="205" value="Utilities.cpp">
+    <edge targetId="2" value="edge143">
+    </edge>
+  </vertex>
+  <vertex id="207" value="XmlElement.cpp">
+    <edge targetId="87" value="edge144">
+    </edge>
+  </vertex>
+  <vertex id="209" value="XmlParser.cpp">
+    <edge targetId="158" value="edge145">
+    </edge>
+    <edge targetId="33" value="edge146">
+    </edge>
+    <edge targetId="2" value="edge147">
+    </edge>
+    <edge targetId="86" value="edge148">
+    </edge>
+    <edge targetId="87" value="edge149">
+    </edge>
+    <edge targetId="157" value="edge150">
+    </edge>
+  </vertex>
+  <vertex id="219" value="XmlUtilities.cpp">
+    <edge targetId="181" value="edge153">
+    </edge>
+    <edge targetId="59" value="edge154">
+    </edge>
+  </vertex>
+</graph>

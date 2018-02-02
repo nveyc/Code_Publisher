@@ -1,0 +1,31 @@
+
+<graph>
+  <vertex id="0" value="Child.h">
+  </vertex>
+  <vertex id="1" value="Child2.h">
+  </vertex>
+  <vertex id="2" value="Grandparent.h">
+    <edge targetId="0" value="edge1">
+    </edge>
+  </vertex>
+  <vertex id="4" value="Parent.h">
+    <edge targetId="0" value="edge2">
+    </edge>
+  </vertex>
+  <vertex id="6" value="Invalid.h">
+  </vertex>
+  <vertex id="7" value="Child.cpp">
+    <edge targetId="0" value="edge3">
+    </edge>
+  </vertex>
+  <vertex id="9" value="Parent.cpp">
+    <edge targetId="0" value="edge4">
+    </edge>
+  </vertex>
+  <vertex id="11" value="Test.cpp">
+    <edge targetId="4" value="edge5">
+    </edge>
+    <edge targetId="2" value="edge6">
+    </edge>
+  </vertex>
+</graph>

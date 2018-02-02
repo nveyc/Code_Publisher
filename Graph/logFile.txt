@@ -1,0 +1,131 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Mon Mar 13 21:48:27 2017
+     Path: "C:\CodeAnalyzerEx\Graph"
+     Args: *.h, *.cpp, *.cs, /m, /r, /f
+                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1     121
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                   Graph.h   namespace                           GraphLib      87     489      67
+                   Graph.h       class                             Vertex      93      26      26
+              public data: typedef std :: pair < size_t , E > Edge ; 
+                   Graph.h    function                               mark     124       2       1
+                   Graph.h    function                              begin     128       2       1
+                   Graph.h    function                                end     132       2       1
+                   Graph.h    function                         operator==     137       6       1
+                   Graph.h    function                         operator!=     146       6       1
+                   Graph.h    function                             Vertex     154       2       1
+                   Graph.h    function                             Vertex     158       2       1
+                   Graph.h    function                                add     162       2       1
+                   Graph.h    function                         operator[]     166       2       1
+                   Graph.h    function                         operator[]     170       2       1
+                   Graph.h    function                              value     174       2       1
+                   Graph.h    function                                 id     178       2       1
+                   Graph.h    function                               size     182       2       1
+                   Graph.h    function                          addVertex     239       7       2
+                   Graph.h    function                         findmember     249      16       3
+                   Graph.h    function                            addEdge     278      28       3
+                   Graph.h    function                            dfsCore     310      14       3
+                   Graph.h    function                                dfs     328       5       1
+                   Graph.h       class                              Graph     190      30      10
+              public data: typedef std :: pair < size_t , E > Edge ; 
+                   Graph.h    function                              begin     221       2       1
+                   Graph.h    function                                end     225       2       1
+                   Graph.h    function                         operator[]     229       2       1
+                   Graph.h    function                         operator[]     233       2       1
+                   Graph.h    function                               size     266       2       1
+                   Graph.h    function                findVertexIndexById     272       3       1
+                   Graph.h    function                                Scc     336      21       3
+                   Graph.h    function                          searchScc     360      46       5
+                   Graph.h       class                            Display     413      51       8
+              public data: typedef Graph < V , E > graph ; 
+              public data: typedef Vertex < V , E > vertex ; 
+              public data: typedef std :: pair < int , E > edge ; 
+                   Graph.h    function                 vertsWithNoParents     420      25       4
+                   Graph.h    function                               show     447      16       3
+                   Graph.h    function                           ToString     466       5       1
+                   Graph.h    function                              ToInt     473       6       1
+                   Graph.h    function                 GraphFromXmlString     481      42       8
+                   Graph.h    function                   GraphToXmlString     526      21       3
+                   Graph.h    function                   GraphToXmlString     550      25       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Graph.cpp    function                           showVert      22       3       1
+                 Graph.cpp    function                          TshowVert      28       3       1
+                 Graph.cpp    function                               main      36      48       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               XmlReader.h       class                          XmlReader      59      23      21
+               XmlReader.h    function                              reset      82       2       1
+               XmlReader.h    function                           position      84       2       1
+               XmlReader.h    function                                xml      86       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlReader.cpp    function                          XmlReader      16       2       1
+             XmlReader.cpp    function                  extractIdentifier      30      22       3
+             XmlReader.cpp    function                            element      55      58       5
+             XmlReader.cpp    function                               body     116      17       2
+             XmlReader.cpp    function                               next     136      12       2
+             XmlReader.cpp    function                                tag     151       4       1
+             XmlReader.cpp    function                         attributes     158      25       2
+             XmlReader.cpp    function                           position     186       6       1
+             XmlReader.cpp    function                        specialChar      22       5       1
+             XmlReader.cpp    function                               main     198      64       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               XmlWriter.h       class                          XmlWriter      58      23      19
+              public data: typedef std :: pair < std :: string , std :: string > attribElem ; 
+               XmlWriter.h    function                          XmlWriter      81       2       1
+               XmlWriter.h    function                                xml      83       2       1
+               XmlWriter.h    function                              clear      86       6       1
+               XmlWriter.h    function                             indent      92       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlWriter.cpp    function                           indentIt      16       5       1
+             XmlWriter.cpp    function                              start      24      11       2
+             XmlWriter.cpp    function                       addAttribute      40      14       3
+             XmlWriter.cpp    function                            addBody      57       8       2
+             XmlWriter.cpp    function                                end      68      11       2
+             XmlWriter.cpp    function                            element      82       6       1
+             XmlWriter.cpp    function                     addDeclaration      93       4       1
+             XmlWriter.cpp    function                         addComment     102       8       2
+             XmlWriter.cpp    function                               mOut     118       3       1
+             XmlWriter.cpp    function                               main     123      85       2
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlReader.cpp    function                            element      55      58       5
+             XmlReader.cpp    function                               main     198      64       4
+             XmlWriter.cpp    function                               main     123      85       2
+
+              public data: Graph.h : 94 - class Vertex
+                typedef std :: pair < size_t , E > Edge ; 
+              public data: Graph.h : 191 - class Graph
+                typedef std :: pair < size_t , E > Edge ; 
+              public data: Graph.h : 415 - class Display
+                typedef Graph < V , E > graph ; 
+              public data: Graph.h : 416 - class Display
+                typedef Vertex < V , E > vertex ; 
+              public data: Graph.h : 417 - class Display
+                typedef std :: pair < int , E > edge ; 
+              public data: XmlWriter.h : 60 - class XmlWriter
+                typedef std :: pair < std :: string , std :: string > attribElem ; 
+
+
+    searched     3 dirs
+   processed     6 files

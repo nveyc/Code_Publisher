@@ -1,0 +1,20 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sun Mar 12 03:13:19 2017
+     Path: "C:\CodeAnalyzerEx\TestTypes"
+     Args: *.h, *.cpp, *.cs, /r, /f
+                                                                               
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+              public data: TestTypes.h : 14 - class SuperHero
+                Property < std :: string > name ; 
+              public data: TestTypes.h : 15 - class SuperHero
+                Property < double > power ; 
+
+
+    searched     6 dirs
+   processed     2 files

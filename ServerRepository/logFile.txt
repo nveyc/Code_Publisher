@@ -1,0 +1,15 @@
+
+                         CodeAnalysis - Built in VS 2015 with C++   - Req #1
+    ==============================================================================================
+     Thu May  4 07:41:57 2017
+     Path: "C:\CodeAnal-WPF 6\ServerRepository"
+     Args: *.h, *.cpp, /f, /r                                                                               
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+
+              public data: Child.h : 9 - namespace Global Namespace
+                int globalData = 10 ; 
+              public data: Child.h : 16 - struct element
+                std :: vector < element > children ; 

@@ -1,0 +1,24 @@
+C:\CodeAnalyzerEx\TestFiles-CS\bin\Debug\TestFiles-CS.exe.config
+C:\CodeAnalyzerEx\TestFiles-CS\bin\Debug\TestFiles-CS.exe
+C:\CodeAnalyzerEx\TestFiles-CS\bin\Debug\TestFiles-CS.pdb
+C:\CodeAnalyzerEx\TestFiles-CS\obj\Debug\TestFiles-CS.csprojResolveAssemblyReference.cache
+C:\CodeAnalyzerEx\TestFiles-CS\obj\Debug\TestFiles-CS.exe
+C:\CodeAnalyzerEx\TestFiles-CS\obj\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 2\TestFiles-CS\bin\Debug\TestFiles-CS.exe.config
+C:\CodeAnal-WPF 2\TestFiles-CS\bin\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 2\TestFiles-CS\bin\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 2\TestFiles-CS\obj\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 2\TestFiles-CS\obj\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 2\TestFiles-CS\obj\Debug\TestFiles-CS.csprojResolveAssemblyReference.cache
+C:\CodeAnal-WPF 3\TestFiles-CS\bin\Debug\TestFiles-CS.exe.config
+C:\CodeAnal-WPF 3\TestFiles-CS\bin\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 3\TestFiles-CS\bin\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 3\TestFiles-CS\obj\Debug\TestFiles-CS.csprojResolveAssemblyReference.cache
+C:\CodeAnal-WPF 3\TestFiles-CS\obj\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 3\TestFiles-CS\obj\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 4\TestFiles-CS\bin\Debug\TestFiles-CS.exe.config
+C:\CodeAnal-WPF 4\TestFiles-CS\bin\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 4\TestFiles-CS\bin\Debug\TestFiles-CS.pdb
+C:\CodeAnal-WPF 4\TestFiles-CS\obj\Debug\TestFiles-CS.csprojResolveAssemblyReference.cache
+C:\CodeAnal-WPF 4\TestFiles-CS\obj\Debug\TestFiles-CS.exe
+C:\CodeAnal-WPF 4\TestFiles-CS\obj\Debug\TestFiles-CS.pdb

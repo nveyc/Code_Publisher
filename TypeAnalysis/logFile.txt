@@ -1,0 +1,17 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sun Mar 12 05:09:13 2017
+     Path: "C:\CodeAnalyzerEx\TypeAnalysis"
+     Args: *.h, *.cpp, *.cs, /r, /f
+                                                                               
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      TestTypeAnalysis.cpp    function                  processSourceCode     218      66       8
+
+
+
+    searched     6 dirs
+   processed     3 files

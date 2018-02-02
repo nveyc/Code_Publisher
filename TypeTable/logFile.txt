@@ -1,0 +1,17 @@
+
+                                      CodeAnalysis - Version 1.4
+    ==============================================================================================
+     Sun Mar 12 04:46:55 2017
+     Path: "C:\CodeAnalyzerEx\TypeTable"
+     Args: *.h, *.cpp, *.cs, /r, /f
+                                                                               
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             TypeTable.cpp    function                               main      17      54       3
+
+
+
+    searched     4 dirs
+   processed     2 files

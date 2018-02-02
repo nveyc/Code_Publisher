@@ -1,0 +1,1876 @@
+
+                         CodeAnalysis - Built in VS 2015 with C++   - Req #1
+    ==============================================================================================
+     Thu May  4 05:22:53 2017
+     Path: "C:\CodeAnal-WPF 5"
+     Args: *.h, *.cpp, CodeAnalyzerEx.sln, /m, /r, /f                                                                               
+           Code Metrics - Start Line, Size (lines/code), and Complexity (number of scopes)
+    ==============================================================================================
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                             namespace                   Global Namespace       1       1    2236
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            AbstrSynTree.h   namespace                       CodeAnalysis      61     114      29
+            AbstrSynTree.h      struct                    DeclarationNode      73       7       1
+              public data: Scanner :: ITokCollection * pTc = nullptr ; 
+              public data: Access access_ ; 
+              public data: DeclType declType_ ; 
+              public data: std :: string package_ ; 
+              public data: size_t line_ ; 
+            AbstrSynTree.h      struct                            ASTNode      82      22       7
+              public data: Type type_ ; 
+              public data: Type parentType_ ; 
+              public data: Name name_ ; 
+              public data: Package package_ ; 
+              public data: Path path_ ; 
+              public data: size_t startLineCount_ ; 
+              public data: size_t endLineCount_ ; 
+              public data: size_t complexity_ ; 
+              public data: std :: vector < ASTNode * > children_ ; 
+              public data: std :: vector < DeclarationNode > decl_ ; 
+              public data: std :: vector < Scanner :: ITokCollection * > statements_ ; 
+            AbstrSynTree.h       class                       AbstrSynTree     106      19      11
+            AbstrSynTree.h    function                            ASTWalk     129      12       2
+            AbstrSynTree.h    function                    ASTWalkNoIndent     145       9       2
+            AbstrSynTree.h    function                     complexityWalk     157      10       2
+            AbstrSynTree.h    function                     complexityEval     170       4       1
+            AbstrSynTree.h      struct                             foobar     176       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          AbstrSynTree.cpp    function                            ASTNode      18       2       1
+          AbstrSynTree.cpp    function                            ASTNode      23       2       1
+          AbstrSynTree.cpp    function                           ~ASTNode      29      10       2
+          AbstrSynTree.cpp    function                               show      42      21       2
+          AbstrSynTree.cpp    function                       AbstrSynTree      69       6       1
+          AbstrSynTree.cpp    function                      ~AbstrSynTree      82       3       1
+          AbstrSynTree.cpp    function                               root      88       3       1
+          AbstrSynTree.cpp    function                            typeMap      96       3       1
+          AbstrSynTree.cpp    function                                add     105       7       1
+          AbstrSynTree.cpp    function                                pop     118       3       1
+          AbstrSynTree.cpp    function                               find     126       9       2
+          AbstrSynTree.cpp    function                    findRecursively     136       9       2
+          AbstrSynTree.cpp    function                               main     159      36       2
+          AbstrSynTree.cpp    function                               void     178       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         ActionsAndRules.h   namespace                       CodeAnalysis      91    1223     153
+         ActionsAndRules.h       class                         Repository     100      56      13
+         ActionsAndRules.h    function                         Repository     122       5       1
+         ActionsAndRules.h    function                        ~Repository     129       3       1
+         ActionsAndRules.h    function                           language     132       2       1
+         ActionsAndRules.h    function                            package     134       2       1
+         ActionsAndRules.h    function                        currentPath     136       2       1
+         ActionsAndRules.h    function                      currentAccess     138       2       1
+         ActionsAndRules.h    function                        getInstance     140       2       1
+         ActionsAndRules.h    function                         scopeStack     142       2       1
+         ActionsAndRules.h    function                                AST     144       2       1
+         ActionsAndRules.h    function                     getGlobalScope     146       2       1
+         ActionsAndRules.h    function                              Toker     148       2       1
+         ActionsAndRules.h    function                          lineCount     151       4       1
+         ActionsAndRules.h       class                         BeginScope     161      18       3
+         ActionsAndRules.h    function                             doTest     164      14       2
+         ActionsAndRules.h       class                   HandleBeginScope     184      27       3
+         ActionsAndRules.h    function                   HandleBeginScope     188       3       1
+         ActionsAndRules.h    function                           doAction     192      18       1
+         ActionsAndRules.h       class                           EndScope     216      16       3
+         ActionsAndRules.h    function                             doTest     219      12       2
+         ActionsAndRules.h       class                     HandleEndScope     237      36       3
+         ActionsAndRules.h    function                     HandleEndScope     243       3       1
+         ActionsAndRules.h    function                           doAction     247      25       1
+         ActionsAndRules.h       class              DetectAccessSpecifier     278      23       4
+         ActionsAndRules.h    function                             doTest     281      19       3
+         ActionsAndRules.h       class              HandleAccessSpecifier     306      22       3
+         ActionsAndRules.h    function              HandleAccessSpecifier     311       3       1
+         ActionsAndRules.h    function                           doAction     315      12       1
+         ActionsAndRules.h       class                   PreprocStatement     333      16       3
+         ActionsAndRules.h    function                             doTest     336      12       2
+         ActionsAndRules.h       class             HandlePreprocStatement     354      19       3
+         ActionsAndRules.h    function             HandlePreprocStatement     359       3       1
+         ActionsAndRules.h    function                           doAction     363       9       1
+         ActionsAndRules.h       class                NamespaceDefinition     378      19       4
+         ActionsAndRules.h    function                             doTest     381      15       3
+         ActionsAndRules.h       class          HandleNamespaceDefinition     402      22       3
+         ActionsAndRules.h    function          HandleNamespaceDefinition     407       3       1
+         ActionsAndRules.h    function                           doAction     411      12       1
+         ActionsAndRules.h       class                    ClassDefinition     429      25       5
+         ActionsAndRules.h    function                             doTest     432      21       4
+         ActionsAndRules.h       class              HandleClassDefinition     459      39       5
+         ActionsAndRules.h    function              HandleClassDefinition     464       3       1
+         ActionsAndRules.h    function                           doAction     468      29       3
+         ActionsAndRules.h       class                   StructDefinition     503      19       4
+         ActionsAndRules.h    function                             doTest     506      15       3
+         ActionsAndRules.h       class             HandleStructDefinition     527      25       3
+         ActionsAndRules.h    function             HandleStructDefinition     532       3       1
+         ActionsAndRules.h    function                           doAction     536      15       1
+         ActionsAndRules.h       class              CppFunctionDefinition     557      24       4
+         ActionsAndRules.h    function                             doTest     560      20       3
+         ActionsAndRules.h       class        HandleCppFunctionDefinition     586      96       8
+         ActionsAndRules.h    function        HandleCppFunctionDefinition     591       3       1
+         ActionsAndRules.h    function                           doAction     595      86       6
+         ActionsAndRules.h       class           CSharpFunctionDefinition     687      29       4
+         ActionsAndRules.h    function                             doTest     690      25       3
+         ActionsAndRules.h       class     HandleCSharpFunctionDefinition     721      60       7
+         ActionsAndRules.h    function     HandleCSharpFunctionDefinition     726       3       1
+         ActionsAndRules.h    function                           doAction     730      50       5
+         ActionsAndRules.h       class                  ControlDefinition     786      25       5
+         ActionsAndRules.h    function                             doTest     789      21       4
+         ActionsAndRules.h       class            HandleControlDefinition     816      24       3
+         ActionsAndRules.h    function            HandleControlDefinition     821       3       1
+         ActionsAndRules.h    function                           doAction     825      14       1
+         ActionsAndRules.h       class                      PrintFunction     846      16       3
+         ActionsAndRules.h    function                      PrintFunction     852       3       1
+         ActionsAndRules.h    function                           doAction     856       5       1
+         ActionsAndRules.h       class                PrettyPrintFunction     867      19       3
+         ActionsAndRules.h    function                PrettyPrintFunction     871       2       1
+         ActionsAndRules.h    function                           doAction     875      10       1
+         ActionsAndRules.h       class                     CppDeclaration     897      78      11
+         ActionsAndRules.h    function                             doTest     900      74      10
+         ActionsAndRules.h       class               HandleCppDeclaration     980      45       6
+         ActionsAndRules.h    function               HandleCppDeclaration     983       2       1
+         ActionsAndRules.h    function                           doAction     987      37       4
+         ActionsAndRules.h       class                  CSharpDeclaration    1036      49       6
+         ActionsAndRules.h    function                             doTest    1039      45       5
+         ActionsAndRules.h       class            HandleCSharpDeclaration    1090      53       6
+         ActionsAndRules.h    function            HandleCSharpDeclaration    1093       2       1
+         ActionsAndRules.h    function                           doAction    1097      45       4
+         ActionsAndRules.h       class                      CppExecutable    1148      44       6
+         ActionsAndRules.h    function                             doTest    1151      40       5
+         ActionsAndRules.h       class                HandleCppExecutable    1197      13       3
+         ActionsAndRules.h    function                HandleCppExecutable    1200       2       1
+         ActionsAndRules.h    function                           doAction    1204       5       1
+         ActionsAndRules.h       class                   CSharpExecutable    1214      46       6
+         ActionsAndRules.h    function                             doTest    1217      42       5
+         ActionsAndRules.h       class             HandleCSharpExecutable    1264      17       3
+         ActionsAndRules.h    function             HandleCSharpExecutable    1267       2       1
+         ActionsAndRules.h    function                           doAction    1271       9       1
+         ActionsAndRules.h       class                            Default    1287      10       2
+         ActionsAndRules.h    function                             doTest    1290       6       1
+         ActionsAndRules.h       class                      HandleDefault    1301      12       3
+         ActionsAndRules.h    function                      HandleDefault    1304       2       1
+         ActionsAndRules.h    function                           doAction    1308       4       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+       ActionsAndRules.cpp    function                               main      26      36       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                   Child.h   namespace                          ChildTest      11      50      18
+                   Child.h      struct                            element      13       5       1
+              public data: std :: vector < element > children ; 
+                   Child.h       class                              Child      19      29       9
+                   Child.h    function                              Child      20       1       1
+                   Child.h    function                             ~Child      21       1       1
+                   Child.h    function                       inlineMethod      23      16       5
+                   Child.h    function                            method2      42       4       1
+                   Child.h    function                     globalFunction      51       9       6
+                   Child.h    function                    globalFunction1      62       9       6
+                   Child.h   namespace                          ChildTest      11      50      18
+                   Child.h      struct                            element      13       5       1
+              public data: std :: vector < element > children ; 
+                   Child.h       class                              Child      19      29       9
+                   Child.h    function                              Child      20       1       1
+                   Child.h    function                             ~Child      21       1       1
+                   Child.h    function                       inlineMethod      23      16       5
+                   Child.h    function                            method2      42       4       1
+                   Child.h    function                     globalFunction      51       9       6
+                   Child.h    function                    globalFunction1      62       9       6
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Child.cpp    function                            method1       7       4       1
+                 Child.cpp    function                            method3      11       4       1
+                 Child.cpp    function                            method4      15       3       1
+                 Child.cpp    function                            method1       7       4       1
+                 Child.cpp    function                            method3      11       4       1
+                 Child.cpp    function                            method4      15       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Child2.h   namespace                         ChildTest2       6       5       8
+                  Child2.h       class                              Child       7       3       7
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Client.h       class                             Client      69      42      39
+                  Client.h    function                             Client      73      13       2
+                  Client.h    function                                 t1      81       2       1
+                  Client.h    function                       displayQueue      94       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Client.cpp    function                         operator()       5      12       3
+                Client.cpp    function                       cStartListen      18      22       4
+                Client.cpp    function                       cMakeMessage      42      21       2
+                Client.cpp    function                    ConnectToServer      64      19       4
+                Client.cpp    function                           sendFile      85      31       2
+                Client.cpp    function                        sendMessage     117       4       1
+                Client.cpp    function                           readFile     124      32       3
+                Client.cpp    function                        readMessage     157      49       7
+                Client.cpp    function                        DemoProject     208      20       1
+                Client.cpp    function                  DemoRequirement58     230      12       3
+                Client.cpp    function                  DemoRequirement78     243      23       3
+                Client.cpp    function                                 t1     246       5       1
+                Client.cpp    function                                 t2     255       8       1
+                Client.cpp    function                 DemoRequirement346     267      19       2
+                Client.cpp    function                                 t1     275       8       1
+                Client.cpp    function                               main     291      27       3
+                Client.cpp    function                                 t1     296      17       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         ConfigureParser.h   namespace                       CodeAnalysis      62      72       9
+         ConfigureParser.h       class             ConfigParseForCodeAnal      67      66       8
+         ConfigureParser.h    function             ConfigParseForCodeAnal      68       1       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+       ConfigureParser.cpp    function            ~ConfigParseForCodeAnal      25      36       1
+       ConfigureParser.cpp    function                             Attach      64      21       2
+       ConfigureParser.cpp    function                              Build      89      98       3
+       ConfigureParser.cpp    function                               main     194      48       8
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          CopyOfUnitTest.h   namespace                               Test      17      64      11
+          CopyOfUnitTest.h    function                              Title      19       4       1
+          CopyOfUnitTest.h       class                           TestBase      26      54       9
+          CopyOfUnitTest.h    function                          ~TestBase      30       2       1
+          CopyOfUnitTest.h    function                             doTest      40      17       4
+          CopyOfUnitTest.h    function                        checkResult      60       8       1
+          CopyOfUnitTest.h    function                             passed      70       4       1
+          CopyOfUnitTest.h    function                             failed      75       4       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+     Cpp11-BlockingQueue.h   namespace                              Async      53     112      13
+     Cpp11-BlockingQueue.h       class                      BlockingQueue      55      17      12
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      56       2       1
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      76       7       1
+     Cpp11-BlockingQueue.h    function                          operator=      87       9       1
+     Cpp11-BlockingQueue.h    function                                deQ     100      26       3
+     Cpp11-BlockingQueue.h    function                                enQ     130       7       2
+     Cpp11-BlockingQueue.h    function                              front     141       6       1
+     Cpp11-BlockingQueue.h    function                              clear     151       5       1
+     Cpp11-BlockingQueue.h    function                               size     160       4       1
+     Cpp11-BlockingQueue.h       class                      BlockingQueue      46      13      10
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      47       2       1
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      62       3       1
+     Cpp11-BlockingQueue.h    function                          operator=      68       6       1
+     Cpp11-BlockingQueue.h    function                                deQ      77      16       3
+     Cpp11-BlockingQueue.h    function                                enQ      96       7       2
+     Cpp11-BlockingQueue.h    function                               size     106       4       1
+     Cpp11-BlockingQueue.h       class                      BlockingQueue      48      13       8
+     Cpp11-BlockingQueue.h    function                      BlockingQueue      49       2       1
+     Cpp11-BlockingQueue.h    function                                deQ      64      16       3
+     Cpp11-BlockingQueue.h    function                                enQ      83       7       2
+     Cpp11-BlockingQueue.h    function                               size      93       4       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+   Cpp11-BlockingQueue.cpp    function                               test      23      12       3
+   Cpp11-BlockingQueue.cpp    function                               main      37      49       3
+   Cpp11-BlockingQueue.cpp    function                               test      21      12       3
+   Cpp11-BlockingQueue.cpp    function                               main      35      47       3
+   Cpp11-BlockingQueue.cpp    function                               test      21      12       3
+   Cpp11-BlockingQueue.cpp    function                               main      35      47       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           CppProperties.h       class                           Property      56      37      11
+           CppProperties.h    function                           Property      62       2       1
+           CppProperties.h    function                           Property      63       2       1
+           CppProperties.h    function                          ~Property      64       2       1
+           CppProperties.h    function                          operator=      69       5       1
+           CppProperties.h    function                     operatorconstT      75       2       1
+           CppProperties.h    function                          newSetter      79       2       1
+           CppProperties.h    function                          newGetter      80       2       1
+           CppProperties.h    function                           getValue      82       1       1
+           CppProperties.h    function                                  ]      89       1       1
+           CppProperties.h    function                                  ]      90       1       1
+           CppProperties.h    function                         operator<<      97      11       3
+           CppProperties.h       class                           Property     118      15       8
+           CppProperties.h    function                           Property     122       2       1
+           CppProperties.h    function                           Property     123       2       1
+           CppProperties.h    function                          ~Property     124       2       1
+           CppProperties.h    function                          newGetter     125       2       1
+           CppProperties.h    function                     operatorconstT     126       2       1
+           CppProperties.h    function                           getValue     127       1       1
+           CppProperties.h    function                                  ]     130       1       1
+           CppProperties.h    function                         operator<<     137      11       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         CppProperties.cpp       class                                  X      14      15       2
+              public data: Property < std :: string > name ; 
+              public data: Property < double > isMutable ; 
+              public data: Property < const double > pi = 3 . 1415927 ; 
+              public data: Property < const std :: string > constName = "a const name" ; 
+         CppProperties.cpp    function                               show      21       7       1
+         CppProperties.cpp    function                            toUpper      41       6       1
+         CppProperties.cpp       class                  UpperCaseProperty      54      12       3
+         CppProperties.cpp    function                  UpperCaseProperty      56       4       1
+         CppProperties.cpp    function                          operator=      61       4       1
+         CppProperties.cpp       class                                  Y      68       4       1
+              public data: UpperCaseProperty name = "jim" ; 
+         CppProperties.cpp       class                                  Z      74      26       4
+         CppProperties.cpp    function                                  Z      77      21       3
+         CppProperties.cpp    function                          newSetter      79       5       1
+         CppProperties.cpp    function                          newGetter      89       7       1
+         CppProperties.cpp    function                               main     102      47       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                DateTime.h       class                           DateTime      32      41       1
+                DateTime.h       class                           DateTime      32      41      40
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              DateTime.cpp    function                              ctime      18       6       1
+              DateTime.cpp    function                          localtime      27       5       1
+              DateTime.cpp    function                           DateTime      35       3       1
+              DateTime.cpp    function                           DateTime      57      28      15
+              DateTime.cpp    function                      operatorstd::      88       3       1
+              DateTime.cpp    function                           DateTime      92       2       1
+              DateTime.cpp    function                           makeTime     100      16       2
+              DateTime.cpp    function                       makeDuration     121       8       1
+              DateTime.cpp    function                                now     132       7       1
+              DateTime.cpp    function                          timepoint     142       3       1
+              DateTime.cpp    function                              ticks     148       4       1
+              DateTime.cpp    function                               time     155       6       1
+              DateTime.cpp    function                          operator<     164       3       1
+              DateTime.cpp    function                          operator>     170       3       1
+              DateTime.cpp    function                         operator+=     176       4       1
+              DateTime.cpp    function                          operator+     183       4       1
+              DateTime.cpp    function                         operator-=     190       4       1
+              DateTime.cpp    function                          operator-     197       3       1
+              DateTime.cpp    function                               year     203       5       1
+              DateTime.cpp    function                              month     211       5       1
+              DateTime.cpp    function                                day     219       5       1
+              DateTime.cpp    function                               hour     227       5       1
+              DateTime.cpp    function                             minute     235       5       1
+              DateTime.cpp    function                             second     243       5       1
+              DateTime.cpp    function                   readDateTimePart      43       9       1
+              DateTime.cpp    function                               main     256      27       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 DepAnal.h   namespace                       CodeAnalysis      45      77      11
+                 DepAnal.h       class                           TypeAnal      47      13       7
+                 DepAnal.h    function                           TypeAnal      65       2       2
+                 DepAnal.h      lambda                                 []      65       1       1
+                 DepAnal.h    function                                DFS      82      27       3
+                 DepAnal.h    function                         doTypeAnal     111      11       1
+                 DepAnal.h    function                          doDisplay      70      11       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               DepAnal.cpp    function                               main       8       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      DependencyAnalysis.h   namespace                       CodeAnalysis      50      15      21
+      DependencyAnalysis.h       class                            DepAnal      52      13      20
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+    DependencyAnalysis.cpp    function                            DepAnal      27       6       1
+    DependencyAnalysis.cpp    function                          saveToken      35      38       7
+    DependencyAnalysis.cpp    function                        DepAnalyzer      75      36       6
+    DependencyAnalysis.cpp    function                           savetoDb     113       4       1
+    DependencyAnalysis.cpp    function                          splitPath     119      20       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Display.h   namespace                            NoSQLDB      35     161      18
+                 Display.h       class                            Display      38      17      17
+                 Display.h    function                            Display      41       2       1
+                 Display.h    function                        showSummary      59      21       2
+                 Display.h    function                        showDetails      84      21       2
+                 Display.h    function                               show     113       8       1
+                 Display.h    function                            showAll     129      14       3
+                 Display.h    function                          showQuery     151      13       3
+                 Display.h    function                         showHeader     168      27       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Display.cpp    function                               main      16     110       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Executive.h   namespace                       CodeAnalysis      91     106       3
+               Executive.h       class                        AnalFileMgr      99      22       1
+               Executive.h       class              CodeAnalysisExecutive     126      70       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Executive.cpp    function                        AnalFileMgr      67       2       1
+             Executive.cpp    function                               file      73       7       1
+             Executive.cpp    function                                dir      83       4       1
+             Executive.cpp    function                               done      90       2       1
+             Executive.cpp    function                           numFiles      95       3       1
+             Executive.cpp    function                            numDirs     101       3       1
+             Executive.cpp    function              CodeAnalysisExecutive     121       8       2
+             Executive.cpp    function             ~CodeAnalysisExecutive     132      14       1
+             Executive.cpp    function           showCommandLineArguments     173       9       1
+             Executive.cpp    function                 ProcessCommandLine     191      34       7
+             Executive.cpp    function                    getAnalysisPath     228       3       1
+             Executive.cpp    function                         getFileMap     236       3       1
+             Executive.cpp    function                     getSourceFiles     246       8       1
+             Executive.cpp    function                     cppHeaderFiles     265      12       3
+             Executive.cpp    function                     cppImplemFiles     280      12       3
+             Executive.cpp    function                        csharpFiles     295      12       3
+             Executive.cpp    function                          fileSLOCs     310       3       1
+             Executive.cpp    function                           numFiles     316       3       1
+             Executive.cpp    function                            numDirs     322       3       1
+             Executive.cpp    function                       showActivity     328      11       3
+             Executive.cpp    function                             string     330       2       1
+             Executive.cpp    function                      clearActivity     341       6       2
+             Executive.cpp    function                        setLanguage     363       7       1
+             Executive.cpp    function                  processSourceCode     371      48       7
+             Executive.cpp    function                 complexityAnalysis     422       4       1
+             Executive.cpp    function                      displayHeader     463      20       1
+             Executive.cpp    function                 displayMetricsLine     486      18       2
+             Executive.cpp    function                             string     488       2       1
+             Executive.cpp    function                           showData     507       6       1
+             Executive.cpp    function                   displayDataLines     515      24       5
+             Executive.cpp    function                     displayMetrics     545      39       4
+             Executive.cpp    function                               void     553      10       1
+             Executive.cpp    function                     displayMetrics     587       4       1
+             Executive.cpp    function                         displayAST     618       7       1
+             Executive.cpp    function               displayMetricSummary     628      34       6
+             Executive.cpp    function                               void     637       2       1
+             Executive.cpp    function                       displaySlocs     685      25       4
+             Executive.cpp    function           dispatchOptionalDisplays     713      22       3
+             Executive.cpp    function                    setDisplayModes     738      25       4
+             Executive.cpp    function                        startLogger     766       9       1
+             Executive.cpp    function                        flushLogger     777       5       1
+             Executive.cpp    function                         stopLogger     784       8       1
+             Executive.cpp    function                         setLogFile     798      13       2
+             Executive.cpp    function                         systemTime     813       8       1
+             Executive.cpp    function                          showUsage     149      21       1
+             Executive.cpp    function                           contains     257       5       1
+             Executive.cpp      struct                           CompExts     432       6       2
+             Executive.cpp    function                         operator()     434       3       1
+             Executive.cpp    function                          removeExt     444       4       1
+             Executive.cpp      struct                          CompNames     450      10       2
+             Executive.cpp    function                         operator()     452       7       1
+             Executive.cpp    function                           TreeWalk     595      20       3
+             Executive.cpp      struct                          compFiles     665      17       3
+             Executive.cpp    function               ChangeFirstCharOfExt     668       8       1
+             Executive.cpp    function                         operator()     678       3       1
+             Executive.cpp      struct                        FileHandler     825       6       2
+             Executive.cpp    function                            execute     827       3       1
+             Executive.cpp      struct                         DirHandler     833       6       2
+             Executive.cpp    function                            execute     835       3       1
+             Executive.cpp      struct                        DoneHandler     842       6       2
+             Executive.cpp    function                            execute     844       3       1
+             Executive.cpp    function                          _showVert     858       3       1
+             Executive.cpp    function                         _TshowVert     864       3       1
+             Executive.cpp    function                         AddtoGraph     869      37       5
+             Executive.cpp    function                  buildNoParentList     908      18       3
+             Executive.cpp    function                        testDepAnal     930      47       4
+             Executive.cpp    function                               main     983      49       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 FileMgr.h   namespace                        FileManager      51     128      21
+                 FileMgr.h       class                            FileMgr      53     120      19
+                 FileMgr.h    function                           ~FileMgr      60       2       1
+                 FileMgr.h    function                            FileMgr      66       4       1
+                 FileMgr.h    function                        getInstance      73       3       1
+                 FileMgr.h    function                         addPattern      79       5       1
+                 FileMgr.h    function                               file      87       7       2
+                 FileMgr.h    function                                dir      97       6       2
+                 FileMgr.h    function                               done     106       6       2
+                 FileMgr.h    function                             search     115       5       1
+                 FileMgr.h    function                               find     123      22       4
+                 FileMgr.h    function                        regForFiles     148       3       1
+                 FileMgr.h    function                         regForDirs     154       3       1
+                 FileMgr.h    function                         regForDone     160       3       1
+                 FileMgr.h    function                             create     175       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               FileMgr.cpp    function                        getInstance      16       3       1
+               FileMgr.cpp      struct                        FileHandler      25       6       2
+               FileMgr.cpp    function                            execute      27       3       1
+               FileMgr.cpp      struct                         DirHandler      33       6       2
+               FileMgr.cpp    function                            execute      35       3       1
+               FileMgr.cpp      struct                        DoneHandler      41       6       2
+               FileMgr.cpp    function                            execute      43       3       1
+               FileMgr.cpp    function                               main      48      25       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              FileSystem.h   namespace                         FileSystem     121     129      97
+              FileSystem.h       class                              Block     128      13       9
+              FileSystem.h    function                              Block     129       2       1
+              FileSystem.h       class                               File     146      31      37
+              FileSystem.h    function                               name     177       2       1
+              FileSystem.h       class                           FileInfo     184      32      25
+              FileSystem.h       class                               Path     221      10      14
+              FileSystem.h       class                          Directory     236      13      11
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            FileSystem.cpp    function                              Block      50       2       1
+            FileSystem.cpp    function                          push_back      56       3       1
+            FileSystem.cpp    function                         operator[]      62       5       1
+            FileSystem.cpp    function                         operator[]      70       5       1
+            FileSystem.cpp    function                         operator==      78       3       1
+            FileSystem.cpp    function                         operator!=      84       3       1
+            FileSystem.cpp    function                               size      90       3       1
+            FileSystem.cpp    function                               File      98       2       1
+            FileSystem.cpp    function                              ~File     102      17       3
+            FileSystem.cpp    function                               open     122      34       5
+            FileSystem.cpp    function                            getLine     159      23       3
+            FileSystem.cpp    function                            readAll     185      13       2
+            FileSystem.cpp    function                            putLine     201      13       1
+            FileSystem.cpp    function                           getBlock     217      22       3
+            FileSystem.cpp    function                           putBlock     242      14       2
+            FileSystem.cpp    function                          getBuffer     259      18       2
+            FileSystem.cpp    function                          putBuffer     280      17       2
+            FileSystem.cpp    function                             isGood     300       9       1
+            FileSystem.cpp    function                              flush     312       4       1
+            FileSystem.cpp    function                              clear     319       6       1
+            FileSystem.cpp    function                              close     328      15       3
+            FileSystem.cpp    function                             exists     346       3       1
+            FileSystem.cpp    function                               copy     352       3       1
+            FileSystem.cpp    function                             remove     358       3       1
+            FileSystem.cpp    function                           FileInfo     364       7       1
+            FileSystem.cpp    function                               good     374       3       1
+            FileSystem.cpp    function                               name     380       3       1
+            FileSystem.cpp    function                        intToString     386       6       1
+            FileSystem.cpp    function                               date     395      14       1
+            FileSystem.cpp    function                               size     412       3       1
+            FileSystem.cpp    function                          isArchive     418       3       1
+            FileSystem.cpp    function                       isCompressed     424       3       1
+            FileSystem.cpp    function                        isDirectory     430       3       1
+            FileSystem.cpp    function                        isEncrypted     436       3       1
+            FileSystem.cpp    function                           isHidden     442       3       1
+            FileSystem.cpp    function                           isNormal     448       3       1
+            FileSystem.cpp    function                          isOffLine     454       3       1
+            FileSystem.cpp    function                         isReadOnly     460       3       1
+            FileSystem.cpp    function                           isSystem     466       3       1
+            FileSystem.cpp    function                        isTemporary     472       3       1
+            FileSystem.cpp    function                          operator<     478       3       1
+            FileSystem.cpp    function                         operator==     484       3       1
+            FileSystem.cpp    function                          operator>     490       3       1
+            FileSystem.cpp    function                            earlier     496       5       1
+            FileSystem.cpp    function                              later     504       5       1
+            FileSystem.cpp    function                            smaller     512       3       1
+            FileSystem.cpp    function                             larger     518       3       1
+            FileSystem.cpp    function                            toLower     524       6       1
+            FileSystem.cpp    function                            toUpper     534       6       1
+            FileSystem.cpp    function                            getName     543      32       5
+            FileSystem.cpp    function                             getExt     578      15       2
+            FileSystem.cpp    function                            getPath     596      10       1
+            FileSystem.cpp    function                    getFullFileSpec     609       8       1
+            FileSystem.cpp    function                           fileSpec     620      16       2
+            FileSystem.cpp    function                getCurrentDirectory     639       5       1
+            FileSystem.cpp    function                setCurrentDirectory     647       3       1
+            FileSystem.cpp    function                           getFiles     653      20       3
+            FileSystem.cpp    function                     getDirectories     676      16       2
+            FileSystem.cpp    function                             create     695       3       1
+            FileSystem.cpp    function                             exists     701       6       1
+            FileSystem.cpp    function                             remove     710       3       1
+            FileSystem.cpp       class                   FileSystemSearch      30      14      10
+            FileSystem.cpp    function                   FileSystemSearch      44       2       1
+            FileSystem.cpp    function                  ~FileSystemSearch      45       2       1
+            FileSystem.cpp    function                              close      46       2       1
+            FileSystem.cpp    function                          firstFile     716      13       2
+            FileSystem.cpp    function                           nextFile     732       6       1
+            FileSystem.cpp    function                     firstDirectory     741      13       2
+            FileSystem.cpp    function                      nextDirectory     757       6       1
+            FileSystem.cpp    function                              title     768       4       1
+            FileSystem.cpp    function                               main     773     438      31
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        FileSystemTest.cpp       class                           TestFile      27     107      15
+        FileSystemTest.cpp    function                           TestFile      30       3       1
+        FileSystemTest.cpp    function                           testName      34       6       1
+        FileSystemTest.cpp    function                  testGetAndPutLine      42      22       3
+        FileSystemTest.cpp    function                 testGetAndPutBlock      66      24       4
+        FileSystemTest.cpp    function                         testExists      92       8       1
+        FileSystemTest.cpp    function                  testCopyAndRemove     102      18       3
+        FileSystemTest.cpp    function                               test     122       9       1
+        FileSystemTest.cpp       class                       TestFileInfo     136      96       9
+        FileSystemTest.cpp    function                       TestFileInfo     139       3       1
+        FileSystemTest.cpp    function                   testConstruction     143       4       1
+        FileSystemTest.cpp    function                           testName     148       9       1
+        FileSystemTest.cpp    function                           testDate     158      11       1
+        FileSystemTest.cpp    function                           testSize     170      16       2
+        FileSystemTest.cpp    function                    testNameCompare     188      31       1
+        FileSystemTest.cpp    function                               test     220       9       1
+        FileSystemTest.cpp       class                           TestPath     234      90       8
+        FileSystemTest.cpp    function                           TestPath     237       3       1
+        FileSystemTest.cpp    function                TestGetFullFileSpec     241       5       1
+        FileSystemTest.cpp    function                        TestGetPath     247      10       1
+        FileSystemTest.cpp    function                        TestGetName     258      13       1
+        FileSystemTest.cpp    function                         TestGetExt     272      19       1
+        FileSystemTest.cpp    function                       TestFileSpec     292      19       1
+        FileSystemTest.cpp    function                               test     312       9       1
+        FileSystemTest.cpp       class                      TestDirectory     326      82       6
+        FileSystemTest.cpp    function                      TestDirectory     329       3       1
+        FileSystemTest.cpp    function             TestCreateRemoveExists     333      10       1
+        FileSystemTest.cpp    function      TestGetAndSetCurrentDirectory     344      11       1
+        FileSystemTest.cpp    function         TestGetFilesAndDirectories     356      41       1
+        FileSystemTest.cpp    function                               test     398       7       1
+        FileSystemTest.cpp    function                               test     410      12       1
+        FileSystemTest.cpp    function                               main     423       7       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          GrammarHelpers.h   namespace                       CodeAnalysis      54      29      48
+          GrammarHelpers.h       class                      GrammarHelper      56      26      47
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        GrammarHelpers.cpp    function                   isControlKeyWord      23      12       3
+        GrammarHelpers.cpp    function                  hasControlKeyWord      38       8       2
+        GrammarHelpers.cpp    function                         isFunction      49      15       3
+        GrammarHelpers.cpp    function                            hasArgs      67      13       2
+        GrammarHelpers.cpp    function               isFunctionDefinition      83       9       1
+        GrammarHelpers.cpp    function                           findLast      95      10       2
+        GrammarHelpers.cpp    function                 isQualifierKeyWord     108      12       2
+        GrammarHelpers.cpp    function                   removeQualifiers     123      10       2
+        GrammarHelpers.cpp    function         removeCallingArgQualifiers     136      17       2
+        GrammarHelpers.cpp    function              isFirstArgDeclaration     164      54       2
+        GrammarHelpers.cpp    function              isFunctionDeclaration     221      33       1
+        GrammarHelpers.cpp    function               isFunctionInvocation     259      12       1
+        GrammarHelpers.cpp    function              hasFunctionInvocation     274      28       2
+        GrammarHelpers.cpp    function                  isDataDeclaration     305      45       1
+        GrammarHelpers.cpp    function                       isExecutable     353      12       1
+        GrammarHelpers.cpp    function              removeCppInitializers     368      17       4
+        GrammarHelpers.cpp    function           removeCSharpInitializers     388      17       4
+        GrammarHelpers.cpp    function                     removeComments     408      10       2
+        GrammarHelpers.cpp    function              condenseTemplateTypes     421      30       4
+        GrammarHelpers.cpp    function                 removeFunctionArgs     454      13       1
+        GrammarHelpers.cpp    function                          showParse     470      13       2
+        GrammarHelpers.cpp    function                      showParseDemo     485      13       2
+        GrammarHelpers.cpp    function                   isScopeConnector     156       5       1
+        GrammarHelpers.cpp    function                               load     511       5       1
+        GrammarHelpers.cpp    function                     showQualifiers     518       7       1
+        GrammarHelpers.cpp    function                      showPredicate     527       6       1
+        GrammarHelpers.cpp    function                               show     535       6       1
+        GrammarHelpers.cpp    function                               test     543      49       1
+        GrammarHelpers.cpp    function                               main     594      59      17
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Grandparent.h       class                        GrandParent      12       9       5
+             Grandparent.h    function                        GrandParent      13       1       1
+             Grandparent.h    function                       ~GrandParent      14       1       1
+             Grandparent.h    function                          GPmethod2      21       5       1
+             Grandparent.h    function                    globalFunction2      28       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                   Graph.h   namespace                           GraphLib      87     489      67
+                   Graph.h       class                             Vertex      93      26      26
+              public data: typedef std :: pair < size_t , E > Edge ; 
+                   Graph.h    function                               mark     124       2       1
+                   Graph.h    function                              begin     128       2       1
+                   Graph.h    function                                end     132       2       1
+                   Graph.h    function                         operator==     137       6       1
+                   Graph.h    function                         operator!=     146       6       1
+                   Graph.h    function                             Vertex     154       2       1
+                   Graph.h    function                             Vertex     158       2       1
+                   Graph.h    function                                add     162       2       1
+                   Graph.h    function                         operator[]     166       2       1
+                   Graph.h    function                         operator[]     170       2       1
+                   Graph.h    function                              value     174       2       1
+                   Graph.h    function                                 id     178       2       1
+                   Graph.h    function                               size     182       2       1
+                   Graph.h    function                          addVertex     239       7       2
+                   Graph.h    function                         findmember     249      16       3
+                   Graph.h    function                            addEdge     278      28       3
+                   Graph.h    function                            dfsCore     310      14       3
+                   Graph.h    function                                dfs     328       5       1
+                   Graph.h       class                              Graph     190      30      10
+              public data: typedef std :: pair < size_t , E > Edge ; 
+                   Graph.h    function                              begin     221       2       1
+                   Graph.h    function                                end     225       2       1
+                   Graph.h    function                         operator[]     229       2       1
+                   Graph.h    function                         operator[]     233       2       1
+                   Graph.h    function                               size     266       2       1
+                   Graph.h    function                findVertexIndexById     272       3       1
+                   Graph.h    function                                Scc     336      21       3
+                   Graph.h    function                          searchScc     360      46       5
+                   Graph.h       class                            Display     413      51       8
+              public data: typedef Graph < V , E > graph ; 
+              public data: typedef Vertex < V , E > vertex ; 
+              public data: typedef std :: pair < int , E > edge ; 
+                   Graph.h    function                 vertsWithNoParents     420      25       4
+                   Graph.h    function                               show     447      16       3
+                   Graph.h    function                           ToString     466       5       1
+                   Graph.h    function                              ToInt     473       6       1
+                   Graph.h    function                 GraphFromXmlString     481      42       8
+                   Graph.h    function                   GraphToXmlString     526      21       3
+                   Graph.h    function                   GraphToXmlString     550      25       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Graph.cpp    function                           showVert      22       3       1
+                 Graph.cpp    function                          TshowVert      28       3       1
+                 Graph.cpp    function                               main      36      48       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             HttpMessage.h       class                        HttpMessage      13      55      31
+             HttpMessage.h    function                            setMode      70      47       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           HttpMessage.cpp    function                       addAttribute      59       3       1
+           HttpMessage.cpp    function                      findAttribute      65       6       1
+           HttpMessage.cpp    function                          findValue      76       9       2
+           HttpMessage.cpp    function                    removeAttribute      88       8       1
+           HttpMessage.cpp    function                         attributes      99       3       1
+           HttpMessage.cpp    function                     parseAttribute     103      11       1
+           HttpMessage.cpp    function                            setBody     118       6       2
+           HttpMessage.cpp    function                            getBody     130      10       2
+           HttpMessage.cpp    function                            addBody     143       3       1
+           HttpMessage.cpp    function                            addBody     149       5       1
+           HttpMessage.cpp    function                            addBody     157       4       1
+           HttpMessage.cpp    function                               body     165       3       1
+           HttpMessage.cpp    function                         bodyLength     171       3       1
+           HttpMessage.cpp    function                       attribString     177       3       1
+           HttpMessage.cpp    function                          attribute     183       3       1
+           HttpMessage.cpp    function                       headerString     189       9       2
+           HttpMessage.cpp    function             toIndentedHeaderString     201       9       2
+           HttpMessage.cpp    function                         bodyString     213       6       1
+           HttpMessage.cpp    function               toIndentedBodyString     222       6       1
+           HttpMessage.cpp    function                           toString     231       3       1
+           HttpMessage.cpp    function                   toIndentedString     237       3       1
+           HttpMessage.cpp    function                              clear     243       4       1
+           HttpMessage.cpp    function                         fillBuffer     250       4       1
+           HttpMessage.cpp       class                         MockSocket      20      11       8
+           HttpMessage.cpp    function                         MockSocket      21       1       1
+           HttpMessage.cpp    function                  setContent_length      24       2       1
+           HttpMessage.cpp    function                         recvString      33       9       2
+           HttpMessage.cpp    function                               recv      44      12       3
+           HttpMessage.cpp    function                               main     260      48       4
+           HttpMessage.cpp    function                            addBody     266       1       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                IFileMgr.h   namespace                        FileManager      13      32       8
+                IFileMgr.h      struct                  IFileEventHandler      15       3       1
+                IFileMgr.h      struct                   IDirEventHandler      20       3       1
+                IFileMgr.h      struct                  IDoneEventHandler      25       3       1
+                IFileMgr.h      struct                           IFileMgr      30      10       3
+                IFileMgr.h    function                          ~IFileMgr      30       2       1
+                IFileMgr.h      struct                     FileMgrFactory      42       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Logger.h   namespace                            Logging      65      54      34
+                  Logger.h       class                             Logger      67      23      21
+                  Logger.h    function                             Logger      68       2       1
+                  Logger.h       class                       StaticLogger      93      18      12
+                  Logger.h    function                             attach      94       2       1
+                  Logger.h    function                              start      95       2       1
+                  Logger.h    function                            running      96       2       1
+                  Logger.h    function                              pause      97       2       1
+                  Logger.h    function                             paused      98       2       1
+                  Logger.h    function                              flush      99       2       1
+                  Logger.h    function                               stop     100       2       1
+                  Logger.h    function                               wait     101       2       1
+                  Logger.h    function                              write     102       2       1
+                  Logger.h    function                              title     103       2       1
+                  Logger.h    function                           instance     104       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Logger.cpp    function                              write      25       4       1
+                Logger.cpp    function                              title      30       4       1
+                Logger.cpp    function                             attach      36       5       1
+                Logger.cpp    function                              start      46      22       5
+                Logger.cpp    function                               void      50      14       4
+                Logger.cpp    function                            running      71       3       1
+                Logger.cpp    function                              pause      77      12       3
+                Logger.cpp    function                             paused      92       3       1
+                Logger.cpp    function                              flush      98       9       2
+                Logger.cpp    function                               stop     110      12       2
+                Logger.cpp    function                               wait     125       4       1
+                Logger.cpp    function                            ~Logger     132       3       1
+                Logger.cpp      struct                           Cosmetic     137       3       2
+                Logger.cpp    function                          ~Cosmetic     137       2       1
+                Logger.cpp    function                               main     146      45       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             MockChannel.h      struct                             ISendr      21       3       1
+             MockChannel.h      struct                             IRecvr      26       3       1
+             MockChannel.h      struct                       IMockChannel      31       5       1
+             MockChannel.h      struct                            IClient      39      15       1
+             MockChannel.h      struct                      ObjectFactory      57       6       5
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           MockChannel.cpp    function                        createSendr     230       2       1
+           MockChannel.cpp    function                        createRecvr     232       2       1
+           MockChannel.cpp    function                       createClient     234       2       1
+           MockChannel.cpp    function                  createMockChannel     238       3       1
+           MockChannel.cpp       class                              Sendr      24       7       3
+           MockChannel.cpp    function                        postMessage      33       3       1
+           MockChannel.cpp    function                              queue      36       2       1
+           MockChannel.cpp       class                              Recvr      44       7       3
+           MockChannel.cpp    function                         getMessage      53       3       1
+           MockChannel.cpp    function                              queue      58       3       1
+           MockChannel.cpp       class                        MockChannel      66      12       7
+           MockChannel.cpp    function                        MockChannel      80       2       1
+           MockChannel.cpp    function                              start      86      23       4
+           MockChannel.cpp    function                             thread      89      18       3
+           MockChannel.cpp    function                               stop     226       2       1
+           MockChannel.cpp       class                          WPFClient     114     111      23
+           MockChannel.cpp    function                        startClient     116       2       1
+           MockChannel.cpp    function                         uploadfile     119       4       1
+           MockChannel.cpp    function                 requestAllCategory     124      12       3
+           MockChannel.cpp    function                                 t1     126       6       2
+           MockChannel.cpp    function                requestTypeAnalysis     137      13       3
+           MockChannel.cpp    function                                 t1     140       6       2
+           MockChannel.cpp    function            displayAllHTMLfileNames     152      13       3
+           MockChannel.cpp    function                                 t1     154       6       2
+           MockChannel.cpp    function           displayAllfileInCategory     165      14       3
+           MockChannel.cpp    function                                 t1     169       6       2
+           MockChannel.cpp    function                   showNoParentFile     181      14       3
+           MockChannel.cpp    function                                 t1     185       6       2
+           MockChannel.cpp    function                           downLoad     196       6       1
+           MockChannel.cpp    function                          reqDelete     203       6       1
+           MockChannel.cpp    function                               demo     211       6       2
+           MockChannel.cpp    function                                 t1     212       2       1
+           MockChannel.cpp    function                          setSender     218       3       1
+           MockChannel.cpp    function                               main     246      19       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 NoSqlDb.h   namespace                            NoSQLDB      48     188      26
+                 NoSqlDb.h       class                            Element      62      17      10
+                 NoSqlDb.h    function                            Element      64       2       1
+                 NoSqlDb.h    function                            Element      65       1       1
+                 NoSqlDb.h    function                          saveChild      82       4       1
+                 NoSqlDb.h    function                               show      89      21       3
+                 NoSqlDb.h    function                         saveRecord     177       6       1
+                 NoSqlDb.h    function                          saveValue     213       6       1
+                 NoSqlDb.h    function                         findmember     113      16       3
+                 NoSqlDb.h       class                            NoSqlDb     138      17      12
+                 NoSqlDb.h    function                               keys     158       8       2
+                 NoSqlDb.h    function                             hasKey     169       5       1
+                 NoSqlDb.h    function                       removeRecord     186      24       5
+                 NoSqlDb.h    function                              value     222       5       1
+                 NoSqlDb.h    function                              count     230       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               NoSqlDb.cpp    function                               main      17      38       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Parent.h   namespace                            parent1      13      33       5
+                  Parent.h   namespace                            parent2      15      29       4
+                  Parent.h       class                             Parent      17      10       1
+                  Parent.h       class                                  T      31       4       1
+                  Parent.h       class                                  T      37       7       1
+                  Parent.h   namespace                            parent1      13      33       5
+                  Parent.h   namespace                            parent2      15      29       4
+                  Parent.h       class                             Parent      17      10       1
+                  Parent.h       class                                  T      31       4       1
+                  Parent.h       class                                  T      37       7       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Parent.cpp    function                               main       5       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Parser.h   namespace                       CodeAnalysis      75      59      17
+                  Parser.h       class                           IBuilder      83       5       2
+                  Parser.h    function                          ~IBuilder      84       2       1
+                  Parser.h       class                            IAction      94       5       2
+                  Parser.h    function                           ~IAction      95       2       1
+                  Parser.h       class                              IRule     105      11       4
+              public data: static const bool Continue = true ; 
+              public data: static const bool Stop = false ; 
+                  Parser.h    function                             ~IRule     108       2       1
+                  Parser.h       class                             Parser     118      11       8
+                  Parser.h    function                             Parser     129       2       1
+                  Parser.h    function                            ~Parser     131       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Parser.cpp    function                          addAction      66       3       1
+                Parser.cpp    function                          doActions      72       5       1
+                Parser.cpp    function                            addRule      28       3       1
+                Parser.cpp    function                               next      33      15       2
+                Parser.cpp    function                              parse      52      11       2
+                Parser.cpp    function                               main      89      46       8
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Persist.h   namespace                            NoSQLDB      49     225      18
+                 Persist.h       class                             Record      56       5       1
+              public data: Property < Key > key ; 
+                 Persist.h       class                            Persist      71      17      16
+                 Persist.h    function                            Persist      76       2       1
+                 Persist.h    function                         saveToFile      93      10       1
+                 Persist.h    function                           compress     107      10       2
+                 Persist.h    function                    restoreFromFile     121      35       3
+                 Persist.h    function                               save     160      47       3
+                 Persist.h    function             getTextBodyFromElement     214       5       1
+                 Persist.h    function             getTextBodyFromElement     225       8       1
+                 Persist.h    function                            restore     238      35       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Persist.cpp    function                               main      17      47       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             PersistHelp.h    function                          operator=     176       4       1
+             PersistHelp.h   namespace                            NoSQLDB      50     272      35
+             PersistHelp.h      struct                           IPersist      57      10       3
+             PersistHelp.h    function                          ~IPersist      59       2       1
+             PersistHelp.h    function                                 id      64       2       1
+             PersistHelp.h       class                      StringWrapper      75      10       6
+             PersistHelp.h    function                      StringWrapper      76       2       1
+             PersistHelp.h    function                          operator=      88       4       1
+             PersistHelp.h    function                               save      95       3       1
+             PersistHelp.h    function                            restore     101       5       1
+             PersistHelp.h    function                      operatorstd::     110       3       1
+             PersistHelp.h       class                      DoubleWrapper     118      10       6
+             PersistHelp.h    function                      DoubleWrapper     119       2       1
+             PersistHelp.h    function                          operator=     131       4       1
+             PersistHelp.h    function                               save     138       3       1
+             PersistHelp.h    function                            restore     144       6       1
+             PersistHelp.h    function                     operatordouble     153       3       1
+             PersistHelp.h       class                     ElementWrapper     161      11       7
+             PersistHelp.h    function                     ElementWrapper     162       2       1
+             PersistHelp.h    function                   operatorElement<     166       2       1
+             PersistHelp.h    function                               save     184      47       2
+             PersistHelp.h    function                            restore     251      15       2
+             PersistHelp.h    function                    getNthChildText     237       7       1
+             PersistHelp.h    function                  getFirstChildText     245       3       1
+             PersistHelp.h       class                      NoSQLDBRecord     272       5       1
+              public data: Property < Key > key ; 
+             PersistHelp.h       class               NoSQLDBRecordWrapper     283       9       1
+             PersistHelp.h       class                             Widget     296       5       1
+              public data: Property < int > wint ; 
+              public data: Property < std :: string > wstr ; 
+             PersistHelp.h       class                      WidgetWrapper     303      11       7
+             PersistHelp.h    function                      WidgetWrapper     304       1       1
+             PersistHelp.h    function                      WidgetWrapper     305       2       1
+             PersistHelp.h    function                          operator=     317       4       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           PersistHelp.cpp    function                               save      18      21       1
+           PersistHelp.cpp    function                            restore      42       8       1
+           PersistHelp.cpp    function                     operatorWidget      53       3       1
+           PersistHelp.cpp    function                               main      66      71       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Publisher.h       class                          publisher      40       5       9
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Publisher.cpp    function                         fileToHtml      22      48       6
+             Publisher.cpp    function                        CreateIndex      73      17       2
+             Publisher.cpp    function                               main      93      17       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Queries.h    function                          doQueries     101      21       1
+                 Queries.h   namespace                            NoSQLDB      43     314      42
+                 Queries.h       class                              Query      57      12       5
+                 Queries.h    function                              Query      61       2       1
+                 Queries.h    function                       setDbPointer      62       2       1
+                 Queries.h    function                           database      64       2       1
+                 Queries.h    function                            execute      73       3       1
+                 Queries.h       class                        TestQueries      82      15      36
+                 Queries.h    function                        TestQueries      83       1       1
+                 Queries.h    function                         TestQuery1     126      24       4
+                 Queries.h    function                                  ]     128      12       3
+                 Queries.h    function                         TestQuery2     154      28       5
+                 Queries.h    function                                  ]     156      12       3
+                 Queries.h    function                         TestQuery3     186      28       5
+                 Queries.h    function                                  ]     188      12       3
+                 Queries.h    function                         TestQuery4     218      29       5
+                 Queries.h    function                                  ]     220      13       3
+                 Queries.h    function                         TestQuery5     251      29       5
+                 Queries.h    function                                  ]     253      13       3
+                 Queries.h    function                         TestQuery6     284      30       5
+                 Queries.h    function                                  ]     286      14       3
+                 Queries.h    function                         TestQuery7     318      38       5
+                 Queries.h    function                                  ]     320      22       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Queries.cpp    function                               main      18     134       8
+               Queries.cpp    function                                  ]      68       4       1
+               Queries.cpp    function                                  ]      77       8       2
+               Queries.cpp    function                                  ]      90       9       2
+               Queries.cpp    function                                  ]     110       9       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              ScopeStack.h   namespace                       CodeAnalysis      59     140      21
+              ScopeStack.h       class                         ScopeStack      61      19      12
+              ScopeStack.h    function                         ScopeStack      81       2       1
+              ScopeStack.h    function                               size      84       2       1
+              ScopeStack.h    function                              begin      87       2       1
+              ScopeStack.h    function                                end      90       2       1
+              ScopeStack.h    function                               push      95       6       1
+              ScopeStack.h    function                                pop     104      12       2
+              ScopeStack.h    function                                top     119       7       2
+              ScopeStack.h    function                          predOfTop     129       8       2
+              ScopeStack.h    function                          showStack     140      17       3
+              ScopeStack.h    function                          showStack     160      16       3
+              ScopeStack.h    function                           TreeWalk     180      18       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            ScopeStack.cpp      struct                            element      25      22       2
+              public data: std :: string type ; 
+              public data: std :: string name ; 
+              public data: size_t startLineCount = 0 ; 
+              public data: size_t endLineCount = 0 ; 
+              public data: std :: string path_ ; 
+            ScopeStack.cpp    function                               show      32      13       1
+            ScopeStack.cpp    function                               main      49      75       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 SemiExp.h   namespace                            Scanner      87      38      44
+                 SemiExp.h       class                            SemiExp      89      35      43
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               SemiExp.cpp    function                            SemiExp      27       2       1
+               SemiExp.cpp    function                            SemiExp      36       5       1
+               SemiExp.cpp    function                            SemiExp      44       7       1
+               SemiExp.cpp    function                          operator=      54       8       2
+               SemiExp.cpp    function                          operator=      65      10       2
+               SemiExp.cpp    function                              begin      76       2       1
+               SemiExp.cpp    function                                end      80       2       1
+               SemiExp.cpp    function                               find      86       7       1
+               SemiExp.cpp    function                          push_back      96       3       1
+               SemiExp.cpp    function                             remove     102      13       3
+               SemiExp.cpp    function                             remove     118       7       1
+               SemiExp.cpp    function                          trimFront     128       9       2
+               SemiExp.cpp    function                               trim     140      28       4
+               SemiExp.cpp    function                            toLower     171       9       3
+               SemiExp.cpp    function                              clear     183       3       1
+               SemiExp.cpp    function                          isComment     189       3       1
+               SemiExp.cpp    function                   currentLineCount     195       9       1
+               SemiExp.cpp    function           isSemiColonBetweenParens     207       9       1
+               SemiExp.cpp    function                                get     219      10       2
+               SemiExp.cpp    function                       isTerminator     232      31       3
+               SemiExp.cpp    function                          getHelper     266      21       2
+               SemiExp.cpp    function                              clone     295       6       1
+               SemiExp.cpp    function                              clone     304       7       2
+               SemiExp.cpp    function                         operator[]     314       5       1
+               SemiExp.cpp    function                         operator[]     322       5       1
+               SemiExp.cpp    function                             length     330       3       1
+               SemiExp.cpp    function                               show     336      11       1
+               SemiExp.cpp    function                               main     351      38       5
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Server.h       class                             Server      20      38      48
+                  Server.h    function                             Server      24       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Server.cpp    function                    ConnecttoClient      44      17       4
+                Server.cpp    function                  serverStartListen      62      19       4
+                Server.cpp    function                  ServerMakeMessage      83      38       4
+                Server.cpp    function                        sendMessage     122       4       1
+                Server.cpp    function                           sendFile     128      30       2
+                Server.cpp    function                        readMessage     160      86       9
+                Server.cpp    function                           readFile     248      31       3
+                Server.cpp    function                returnAllcatagories     281      12       2
+                Server.cpp    function                         returnHTML     295       9       2
+                Server.cpp    function          displayAllfilesInCatagory     305      12       2
+                Server.cpp    function                       reDeleteFile     319      20       4
+                Server.cpp    function                              split     341      17       4
+                Server.cpp    function             displayAllfilesWithNoP     360      21       2
+                Server.cpp    function                         operator()     384      12       3
+                Server.cpp    function                               main     400      12       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                 Sockets.h       class                       SocketSystem     144       8       4
+                 Sockets.h       class                             Socket     159      39      27
+                 Sockets.h    function                   operator::SOCKET     170       2       1
+                 Sockets.h    function                         validState     188       2       1
+                 Sockets.h       class                    SocketConnecter     204      12      13
+                 Sockets.h       class                     SocketListener     223      21      22
+                 Sockets.h    function                              start     254      47       6
+                 Sockets.h    function                       ListenThread     268      29       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Sockets.cpp    function                       SocketSystem      36       6       2
+               Sockets.cpp    function                      ~SocketSystem      45       4       1
+               Sockets.cpp    function                             Socket      56       6       1
+               Sockets.cpp    function                             Socket      68       7       1
+               Sockets.cpp    function                             Socket      78       9       1
+               Sockets.cpp    function                          operator=      90      10       1
+               Sockets.cpp    function                              ipVer     107       3       1
+               Sockets.cpp    function                              close     113       4       1
+               Sockets.cpp    function                       shutDownSend     120       6       1
+               Sockets.cpp    function                       shutDownRecv     130       6       1
+               Sockets.cpp    function                           shutDown     139       7       1
+               Sockets.cpp    function                            ~Socket     148       4       1
+               Sockets.cpp    function                               send     158      14       2
+               Sockets.cpp    function                               recv     178      13       2
+               Sockets.cpp    function                         sendString     197      15       2
+               Sockets.cpp    function                         recvString     223      15       2
+               Sockets.cpp    function                         sendStream     243       3       1
+               Sockets.cpp    function                         recvStream     251       3       1
+               Sockets.cpp    function                       bytesWaiting     257       5       1
+               Sockets.cpp    function                        waitForData     265      12       2
+               Sockets.cpp    function                    SocketConnecter     283       3       1
+               Sockets.cpp    function                    SocketConnecter     289       8       1
+               Sockets.cpp    function                          operator=     300      10       1
+               Sockets.cpp    function                   ~SocketConnecter     313       3       1
+               Sockets.cpp    function                            connect     319      63       8
+               Sockets.cpp    function                     SocketListener     388      11       1
+               Sockets.cpp    function                     SocketListener     402       9       1
+               Sockets.cpp    function                          operator=     414      11       1
+               Sockets.cpp    function                    ~SocketListener     428       3       1
+               Sockets.cpp    function                               bind     434      42       6
+               Sockets.cpp    function                             listen     479      11       2
+               Sockets.cpp    function                             accept     493      14       2
+               Sockets.cpp    function                               stop     510       4       1
+               Sockets.cpp       class                      ClientHandler     526       6      19
+               Sockets.cpp    function                         operator()     542      46       6
+               Sockets.cpp    function                 testStringHandling     594      33       6
+               Sockets.cpp    function                 testBufferHandling     633      39       6
+               Sockets.cpp    function                        clearBuffer     536       4       1
+               Sockets.cpp    function           clientTestStringHandling     676      31       5
+               Sockets.cpp    function           clientTestBufferHandling     710      57       8
+               Sockets.cpp    function                               main     770      35       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        StoredProcedures.h   namespace                            NoSQLDB      32     285      34
+        StoredProcedures.h       class                   StoredProcedures      35      11       5
+        StoredProcedures.h    function                           getQuery      50       5       1
+        StoredProcedures.h    function                           hasQuery      59       3       1
+        StoredProcedures.h    function                             accept      66       3       1
+        StoredProcedures.h    function                   StoredProcedures      73       9       1
+        StoredProcedures.h    function                         TestQuery1      86      24       4
+        StoredProcedures.h    function                                  ]      88      12       3
+        StoredProcedures.h    function                         TestQuery2     114      28       4
+        StoredProcedures.h    function                                  ]     116      12       3
+        StoredProcedures.h    function                         TestQuery3     146      28       4
+        StoredProcedures.h    function                                  ]     148      12       3
+        StoredProcedures.h    function                         TestQuery4     178      29       4
+        StoredProcedures.h    function                                  ]     180      13       3
+        StoredProcedures.h    function                         TestQuery5     211      29       4
+        StoredProcedures.h    function                                  ]     213      13       3
+        StoredProcedures.h    function                         TestQuery6     244      30       4
+        StoredProcedures.h    function                                  ]     246      14       3
+        StoredProcedures.h    function                         TestQuery7     278      38       4
+        StoredProcedures.h    function                                  ]     280      22       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      StoredProcedures.cpp    function                         TestQuery1      11      24       4
+      StoredProcedures.cpp    function                                  ]      13      12       3
+      StoredProcedures.cpp    function                               main      37       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Test.cpp    function                          GPmethod3       5       4       1
+                  Test.cpp    function                               main      11       7       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              TestDpAnal.h   namespace                       CodeAnalysis      92      79       3
+              TestDpAnal.h       class                        AnalFileMgr     100      21       1
+              TestDpAnal.h       class              CodeAnalysisExecutive     126      44       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            TestDpAnal.cpp    function                        AnalFileMgr      52       2       1
+            TestDpAnal.cpp    function                               file      58       7       1
+            TestDpAnal.cpp    function                                dir      68       4       1
+            TestDpAnal.cpp    function                               done      74       2       1
+            TestDpAnal.cpp    function              CodeAnalysisExecutive      89       8       2
+            TestDpAnal.cpp    function             ~CodeAnalysisExecutive      99       2       1
+            TestDpAnal.cpp    function           showCommandLineArguments     105       8       1
+            TestDpAnal.cpp    function                 ProcessCommandLine     122      32       7
+            TestDpAnal.cpp    function                     getSourceFiles     157       6       1
+            TestDpAnal.cpp    function                     cppHeaderFiles     174      12       3
+            TestDpAnal.cpp    function                     cppImplemFiles     189      12       3
+            TestDpAnal.cpp    function                        csharpFiles     204      12       3
+            TestDpAnal.cpp    function                  processSourceCode     220      48       7
+            TestDpAnal.cpp    function                           contains     166       5       1
+            TestDpAnal.cpp      struct                        FileHandler     270       6       2
+            TestDpAnal.cpp    function                            execute     272       3       1
+            TestDpAnal.cpp      struct                         DirHandler     278       6       2
+            TestDpAnal.cpp    function                            execute     280       3       1
+            TestDpAnal.cpp      struct                        DoneHandler     287       6       2
+            TestDpAnal.cpp    function                            execute     289       3       1
+            TestDpAnal.cpp    function                               main     299      46       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+       TestMockChannel.cpp    function                               main      10      18       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        TestTypeAnalysis.h   namespace                       CodeAnalysis      74      79     151
+        TestTypeAnalysis.h       class                        AnalFileMgr      82      21      15
+        TestTypeAnalysis.h       class              CodeAnalysisExecutive     108      44     135
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+      TestTypeAnalysis.cpp    function                        AnalFileMgr      50       2       1
+      TestTypeAnalysis.cpp    function                               file      56       7       1
+      TestTypeAnalysis.cpp    function                                dir      66       4       1
+      TestTypeAnalysis.cpp    function                               done      72       2       1
+      TestTypeAnalysis.cpp    function              CodeAnalysisExecutive      87       8       2
+      TestTypeAnalysis.cpp    function             ~CodeAnalysisExecutive      97       2       1
+      TestTypeAnalysis.cpp    function           showCommandLineArguments     103       8       1
+      TestTypeAnalysis.cpp    function                 ProcessCommandLine     120      32       7
+      TestTypeAnalysis.cpp    function                     getSourceFiles     155       6       1
+      TestTypeAnalysis.cpp    function                     cppHeaderFiles     172      12       3
+      TestTypeAnalysis.cpp    function                     cppImplemFiles     187      12       3
+      TestTypeAnalysis.cpp    function                        csharpFiles     202      12       3
+      TestTypeAnalysis.cpp    function                  processSourceCode     218      49       7
+      TestTypeAnalysis.cpp    function                           contains     164       5       1
+      TestTypeAnalysis.cpp    function                               main     274      24       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               TestTypes.h   namespace                            NoSQLDB      10      77      10
+               TestTypes.h       class                          SuperHero      12       5       1
+              public data: Property < std :: string > name ; 
+              public data: Property < double > power ; 
+               TestTypes.h    function                         operator<<      19       4       1
+               TestTypes.h       class                   SuperHeroWrapper      25      11       7
+               TestTypes.h    function                   SuperHeroWrapper      26       1       1
+               TestTypes.h    function                   SuperHeroWrapper      27       2       1
+               TestTypes.h    function                          operator=      39       4       1
+               TestTypes.h    function                               save      49      21       1
+               TestTypes.h    function                            restore      73       8       1
+               TestTypes.h    function                  operatorSuperHero      84       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             TestTypes.cpp    function                               main      12      18       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Tokenizer.h   namespace                            Scanner      92      23       2
+               Tokenizer.h       class                              Toker      97      17       1
+               Tokenizer.h       class                              Toker      95      48      61
+               Tokenizer.h    function                     returnComments     145       3       1
+               Tokenizer.h    function                          isFileEnd     148       2       1
+               Tokenizer.h    function                              lines     150       2       1
+               Tokenizer.h    function                         braceLevel     152       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Tokenizer.cpp    function                              Toker     570       5       1
+             Tokenizer.cpp    function                             ~Toker     582       4       1
+             Tokenizer.cpp    function                             attach     592       9       2
+             Tokenizer.cpp    function                             getTok     604      11       2
+             Tokenizer.cpp    function                            canRead     616       2       1
+             Tokenizer.cpp    function                     returnComments     622       3       1
+             Tokenizer.cpp    function                          isComment     628       5       1
+             Tokenizer.cpp    function                   currentLineCount     636       3       1
+             Tokenizer.cpp    function                   setSpecialTokens     642       3       1
+             Tokenizer.cpp    function                              Toker      25      13       3
+             Tokenizer.cpp    function                             ~Toker      41      12       3
+             Tokenizer.cpp    function                            setMode      55       7       1
+             Tokenizer.cpp    function                setSingleCharTokens      64       5       1
+             Tokenizer.cpp    function                             attach      72      17       3
+             Tokenizer.cpp    function                               peek      92       7       1
+             Tokenizer.cpp    function                            putback     102       6       1
+             Tokenizer.cpp    function                                get     111       9       2
+             Tokenizer.cpp    function                            getChar     124      15       1
+             Tokenizer.cpp    function                    isSingleCharTok     142       5       1
+             Tokenizer.cpp    function                    stripWhiteSpace     150       8       2
+             Tokenizer.cpp    function                   isIdentifierChar     161       5       1
+             Tokenizer.cpp    function                           isTokEnd     169      13       1
+             Tokenizer.cpp    function                     isBeginComment     185      13       3
+             Tokenizer.cpp    function                       isEndComment     201       7       1
+             Tokenizer.cpp    function                         eatComment     211      17       3
+             Tokenizer.cpp    function                       isBeginQuote     231      13       3
+             Tokenizer.cpp    function                         isEndQuote     247      10       2
+             Tokenizer.cpp    function                           eatQuote     260      15       2
+             Tokenizer.cpp    function                             getTok     278      46       8
+             Tokenizer.cpp   namespace                            Scanner      19      83      38
+             Tokenizer.cpp      struct                            Context      31      30       5
+              public data: std :: string token ; 
+              public data: std :: istream * _pIn ; 
+             Tokenizer.cpp    function                            Context     529      15       1
+             Tokenizer.cpp    function                           ~Context     547      12       1
+             Tokenizer.cpp       class                       ConsumeState      72      29      32
+             Tokenizer.cpp    function                       consumeChars      82       4       1
+             Tokenizer.cpp    function                            canRead      85       2       1
+             Tokenizer.cpp    function                             getTok      86       2       1
+             Tokenizer.cpp    function                             hasTok      87       2       1
+             Tokenizer.cpp    function                         setContext     109       3       1
+             Tokenizer.cpp    function                             attach     115       5       1
+             Tokenizer.cpp    function                   setSpecialTokens     123      12       2
+             Tokenizer.cpp    function                   currentLineCount     136       2       1
+             Tokenizer.cpp    function                        collectChar     142      11       2
+             Tokenizer.cpp    function                     returnComments     161       3       1
+             Tokenizer.cpp    function                     isOneCharToken     167       6       1
+             Tokenizer.cpp    function                     isTwoCharToken     176       6       1
+             Tokenizer.cpp    function                         makeString     185       4       1
+             Tokenizer.cpp    function                          nextState     192      81      14
+             Tokenizer.cpp    function                       ConsumeState     560       2       1
+             Tokenizer.cpp    function                      ~ConsumeState     564       2       1
+             Tokenizer.cpp       class                      EatWhitespace     276      16       4
+             Tokenizer.cpp    function                      EatWhitespace     279       3       1
+             Tokenizer.cpp    function                           eatChars     283       8       2
+             Tokenizer.cpp       class                      EatCppComment     295      17       4
+             Tokenizer.cpp    function                      EatCppComment     298       3       1
+             Tokenizer.cpp    function                           eatChars     302       9       2
+             Tokenizer.cpp       class                        EatCComment     315      24       4
+             Tokenizer.cpp    function                        EatCComment     318       3       1
+             Tokenizer.cpp    function                           eatChars     322      16       2
+             Tokenizer.cpp       class                      EatPunctuator     342      38       9
+             Tokenizer.cpp    function                      EatPunctuator     345       3       1
+             Tokenizer.cpp    function                           eatChars     349      30       7
+             Tokenizer.cpp       class                        EatAlphanum     385      17       4
+             Tokenizer.cpp    function                        EatAlphanum     388       3       1
+             Tokenizer.cpp    function                           eatChars     392       9       2
+             Tokenizer.cpp       class               EatSpecialCharacters     405      19       4
+             Tokenizer.cpp    function               EatSpecialCharacters     408       3       1
+             Tokenizer.cpp    function                           eatChars     412      11       2
+             Tokenizer.cpp    function                         isEscapted     427      10       2
+             Tokenizer.cpp       class                        EatDQString     440      20       4
+             Tokenizer.cpp    function                        EatDQString     443       3       1
+             Tokenizer.cpp    function                           eatChars     447      12       2
+             Tokenizer.cpp       class                    EatRawCppString     463      19       4
+             Tokenizer.cpp    function                    EatRawCppString     466       3       1
+             Tokenizer.cpp    function                           eatChars     470      11       2
+             Tokenizer.cpp       class                 EatRawCSharpString     485      19       4
+             Tokenizer.cpp    function                 EatRawCSharpString     488       3       1
+             Tokenizer.cpp    function                           eatChars     492      11       2
+             Tokenizer.cpp       class                        EatSQString     507      19       4
+             Tokenizer.cpp    function                        EatSQString     510       3       1
+             Tokenizer.cpp    function                           eatChars     514      11       2
+             Tokenizer.cpp    function                            testLog     648       5       1
+             Tokenizer.cpp    function                               main     666      80       7
+             Tokenizer.cpp    function                               main     329      61       8
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            TypeAnalysis.h   namespace                       CodeAnalysis      44      77      11
+            TypeAnalysis.h       class                           TypeAnal      46      13       7
+            TypeAnalysis.h    function                           TypeAnal      64       2       2
+            TypeAnalysis.h      lambda                                 []      64       1       1
+            TypeAnalysis.h    function                                DFS      81      28       3
+            TypeAnalysis.h    function                         doTypeAnal     111      10       1
+            TypeAnalysis.h    function                          doDisplay      69      11       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               TypeTable.h   namespace                          TypeTABLE      45     158      17
+               TypeTable.h       class                            Element      64      13       6
+               TypeTable.h    function                            Element      66       2       1
+               TypeTable.h    function                            Element      67       1       1
+               TypeTable.h    function                               show      81      11       1
+               TypeTable.h    function                         saveRecord     141       6       1
+               TypeTable.h    function                          saveValue     163       6       1
+               TypeTable.h       class                          TypeTable     101      18      10
+               TypeTable.h    function                               keys     122       8       2
+               TypeTable.h    function                             hasKey     133       5       1
+               TypeTable.h    function                       removeRecord     150      10       2
+               TypeTable.h    function                              value     172       5       1
+               TypeTable.h    function                              count     180       3       1
+               TypeTable.h    function                          showtable     186      16       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             TypeTable.cpp    function                               main      20      45       3
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                UnitTest.h   namespace                               Test      17      64      11
+                UnitTest.h    function                              Title      19       4       1
+                UnitTest.h       class                           TestBase      26      54       9
+                UnitTest.h    function                          ~TestBase      30       2       1
+                UnitTest.h    function                             doTest      40      17       4
+                UnitTest.h    function                        checkResult      60       8       1
+                UnitTest.h    function                             passed      70       4       1
+                UnitTest.h    function                             failed      75       4       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              UnitTest.cpp       class                 TestStdStringClass      19      42       6
+              UnitTest.cpp    function                   TestConstruction      22       8       1
+              UnitTest.cpp    function                           TestCopy      31       7       1
+              UnitTest.cpp    function          TestWillThrowStdException      39       4       1
+              UnitTest.cpp    function   TestWillThrowStructuredException      44       5       1
+              UnitTest.cpp    function                               test      50       8       1
+              UnitTest.cpp    function                               main      63      10       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               Utilities.h   namespace                          Utilities      56     146      21
+               Utilities.h       class                               test      58       4       1
+              public data: std :: vector < std :: string > publicVector ; 
+               Utilities.h       class                       StringHelper      64      15       1
+               Utilities.h       class                            Convert      85       7       7
+               Utilities.h    function                                  >      86       2       1
+               Utilities.h    function                           toString      98       6       1
+               Utilities.h    function                         fromString     111       7       1
+               Utilities.h    function                                 id     122       3       1
+               Utilities.h    function                           toString     129       3       1
+               Utilities.h    function                         fromString     135       3       1
+               Utilities.h    function                            putLine     141       1       1
+               Utilities.h    function                           putLines     144       3       1
+               Utilities.h    function                          titleCore     149       3       1
+               Utilities.h    function                              Title     153       1       1
+               Utilities.h    function                           subTitle     155       1       1
+               Utilities.h    function                      isspaceHelper     177       4       1
+               Utilities.h    function                              ltrim     182       5       1
+               Utilities.h    function                              rtrim     189       5       1
+               Utilities.h    function                               trim     196       3       1
+               Utilities.h   namespace                          Utilities      45      36      24
+               Utilities.h       class                       StringHelper      47       6      20
+               Utilities.h       class                          Converter      58       5       3
+               Utilities.h    function                           toString      66       5       1
+               Utilities.h    function                            toValue      74       6       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             Utilities.cpp    function                            putline     122       3       1
+             Utilities.cpp    function                            putline      59       3       1
+             Utilities.cpp    function                              Title      28       4       1
+             Utilities.cpp    function                              Title      34       5       1
+             Utilities.cpp    function                              title      41       4       1
+             Utilities.cpp    function                              title      47       5       1
+             Utilities.cpp    function                             sTitle      54       7       1
+             Utilities.cpp    function                             sTitle      63       8       1
+             Utilities.cpp    function                               trim      73      22       3
+             Utilities.cpp    function                              split      97      23       4
+             Utilities.cpp    function                              title      23       4       1
+             Utilities.cpp    function                              Title      29       4       1
+             Utilities.cpp    function                              split      35      22       4
+             Utilities.cpp    function                               main     131      41       2
+             Utilities.cpp    function                               void      16       1       1
+             Utilities.cpp    function                               void      19       1       1
+             Utilities.cpp    function                               main      66      41       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                  Window.h   namespace                      CppCliWindows      79     119      54
+                  Window.h       class                      WPFCppCliDemo      81     116      53
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+                Window.cpp    function                      WPFCppCliDemo      24      47       1
+                Window.cpp    function                     ~WPFCppCliDemo      73       5       1
+                Window.cpp    function                     setUpStatusBar      80       6       1
+                Window.cpp    function                    setUpTabControl      88       9       1
+                Window.cpp    function             setTextBlockProperties      99       7       1
+                Window.cpp    function               setButtonsProperties     108      26       1
+                Window.cpp    function               setUpSendMessageView     136      14       1
+                Window.cpp    function                        toStdString     152       6       1
+                Window.cpp    function                     toSystemString     161       6       1
+                Window.cpp    function                            addText     169       7       2
+                Window.cpp    function                               each     171       4       1
+                Window.cpp    function                         getMessage     178      15       2
+                Window.cpp    function                   getItemsFromList     196      19       5
+                Window.cpp    function                               each     203       3       1
+                Window.cpp    function                               each     210       3       1
+                Window.cpp    function                 setUploadRomAndCol     217      27       1
+                Window.cpp    function                   setUpLoadButtoms     245      31       1
+                Window.cpp    function                      setUpLoadView     278      40       1
+                Window.cpp    function                 setUpRepoRomAndCol     321      36       1
+                Window.cpp    function                 sethAnalysisButton     360      10       1
+                Window.cpp    function             sethShowCatagoryButton     371      10       1
+                Window.cpp    function       sethShowFileinCatagoryButton     382      11       1
+                Window.cpp    function              sethDisplayhtmlButton     394      10       1
+                Window.cpp    function                 sethDownloadButton     405      10       1
+                Window.cpp    function               sethShowNoParentFile     416      10       1
+                Window.cpp    function                   sethDeleteButton     427      10       1
+                Window.cpp    function                      setUpRepoView     440      21       1
+                Window.cpp    function                    browseForFolder     463      17       2
+                Window.cpp    function                setUpConnectionView     481       3       1
+                Window.cpp    function                           OnLoaded     486       3       1
+                Window.cpp    function                          Unloading     490       3       1
+                Window.cpp    function                    ShowAllCatagory     494       5       1
+                Window.cpp    function                ShowFilesInCatagory     500       8       1
+                Window.cpp    function                       DownloadFile     510       8       2
+                Window.cpp    function                               each     514       3       1
+                Window.cpp    function                   ShowNoParentFile     518      10       1
+                Window.cpp    function                        DisplayHTML     528       7       1
+                Window.cpp    function                         UploadFile     537       7       2
+                Window.cpp    function                               each     540       3       1
+                Window.cpp    function                        SendAnalyze     545       5       1
+                Window.cpp    function                        Uploadfiles     553       9       2
+                Window.cpp    function                               each     558       3       1
+                Window.cpp    function                         DeleteFile     564      28       5
+                Window.cpp    function                               each     571       3       1
+                Window.cpp    function                               each     580       5       1
+                Window.cpp    function                               Demo     594       3       1
+                Window.cpp    function                               main     602       6       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          WindowsHelpers.h   namespace                     WindowsHelpers      42       5       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+        WindowsHelpers.cpp    function                    wstringToString      26       7       1
+        WindowsHelpers.cpp    function                 stringToWideString      35       7       1
+        WindowsHelpers.cpp    function                         GetLastMsg      45      32       1
+        WindowsHelpers.cpp    function                               main      81       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlDocument.h   namespace                      XmlProcessing      87      83      31
+             XmlDocument.h       class                        XmlDocument      92      40      20
+             XmlDocument.h    function                        XmlDocument     100       4       1
+             XmlDocument.h    function                         docElement     111       2       1
+             XmlDocument.h    function                                DFS     137       5       1
+             XmlDocument.h    function                                DFS     153       6       1
+             XmlDocument.h    function                                DFS     163       6       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+           XmlDocument.cpp    function                        XmlDocument      23       5       1
+           XmlDocument.cpp    function                        XmlDocument      31       4       1
+           XmlDocument.cpp    function                          operator=      38       6       1
+           XmlDocument.cpp    function                            xmlRoot      47       8       2
+           XmlDocument.cpp    function                            xmlRoot      58       3       1
+           XmlDocument.cpp    function                               find      66      11       2
+           XmlDocument.cpp    function                            element      82       5       1
+           XmlDocument.cpp    function                           elements      92      12       2
+           XmlDocument.cpp    function                        descendents     109       9       1
+           XmlDocument.cpp    function                             select     121       3       1
+           XmlDocument.cpp    function                               size     127       6       1
+           XmlDocument.cpp    function                           toString     136       3       1
+           XmlDocument.cpp    function                            enQuote     139       2       1
+           XmlDocument.cpp    function                      buildDocument     150      19       1
+           XmlDocument.cpp    function                            testDFS     172      12       2
+           XmlDocument.cpp    function                                  ]     176       3       1
+           XmlDocument.cpp    function                        testElement     187      19       1
+           XmlDocument.cpp    function                       testElements     209      18       3
+           XmlDocument.cpp    function                    testDescendents     230      18       3
+           XmlDocument.cpp    function             testElementDescendents     251      18       3
+           XmlDocument.cpp    function                               main     272      37       4
+           XmlDocument.cpp    function                                  ]     282       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+              XmlElement.h   namespace                      XmlProcessing     104     176      65
+              XmlElement.h       class                 AbstractXmlElement     109      17       8
+              XmlElement.h    function                                tag     117       2       1
+              XmlElement.h    function                           addChild     126       2       1
+              XmlElement.h    function                        removeChild     127       2       1
+              XmlElement.h    function                           children     130       3       1
+              XmlElement.h    function                          addAttrib     132       2       1
+              XmlElement.h    function                       removeAttrib     133       2       1
+              XmlElement.h    function                ~AbstractXmlElement     134       2       1
+              XmlElement.h       class                         DocElement     141      15      13
+              XmlElement.h    function                        ~DocElement     143       2       1
+              XmlElement.h    function                           children     158       3       1
+              XmlElement.h       class                        TextElement     167      11       5
+              XmlElement.h    function                        TextElement     168       2       1
+              XmlElement.h    function                       ~TextElement     169       2       1
+              XmlElement.h    function                              value     178       2       1
+              XmlElement.h       class                      TaggedElement     187      19      15
+              XmlElement.h    function                      TaggedElement     188       1       1
+              XmlElement.h    function                     ~TaggedElement     190       2       1
+              XmlElement.h    function                           children     208       3       1
+              XmlElement.h    function                                tag     210       2       1
+              XmlElement.h       class                     CommentElement     220      11       5
+              XmlElement.h    function                     CommentElement     221       2       1
+              XmlElement.h    function                    ~CommentElement     223       2       1
+              XmlElement.h    function                              value     225       2       1
+              XmlElement.h       class                   ProcInstrElement     240      14       9
+              XmlElement.h    function                   ProcInstrElement     242       2       1
+              XmlElement.h    function                              value     246       2       1
+              XmlElement.h       class                   XmlDeclarElement     261      13       9
+              XmlElement.h    function                   XmlDeclarElement     263       2       1
+              XmlElement.h    function                              value     267       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            XmlElement.cpp    function                     makeDocElement      24       4       1
+            XmlElement.cpp    function                  makeTaggedElement      32       9       2
+            XmlElement.cpp    function                    makeTextElement      44       4       1
+            XmlElement.cpp    function                 makeCommentElement      51       4       1
+            XmlElement.cpp    function               makeProcInstrElement      58       4       1
+            XmlElement.cpp    function               makeXmlDeclarElement      65       4       1
+            XmlElement.cpp    function                              title     337       4       1
+            XmlElement.cpp    function                         DocElement      77       7       1
+            XmlElement.cpp    function                         hasXmlRoot      87       8       2
+            XmlElement.cpp    function                           addChild      98      27       3
+            XmlElement.cpp    function                        removeChild     128       9       2
+            XmlElement.cpp    function                              value     138       2       1
+            XmlElement.cpp    function                           toString     144       6       1
+            XmlElement.cpp    function                           toString     225       6       1
+            XmlElement.cpp    function                           addChild     156       4       1
+            XmlElement.cpp    function                        removeChild     163       9       2
+            XmlElement.cpp    function                          addAttrib     175       5       1
+            XmlElement.cpp    function                       removeAttrib     183      11       3
+            XmlElement.cpp    function                              value     195       2       1
+            XmlElement.cpp    function                           toString     201      18       2
+            XmlElement.cpp    function                           toString     323       8       1
+            XmlElement.cpp    function                          addAttrib     237       5       1
+            XmlElement.cpp    function                       removeAttrib     245      11       3
+            XmlElement.cpp    function                           toString     259      15       2
+            XmlElement.cpp    function                           toString     280      15       2
+            XmlElement.cpp    function                          addAttrib     298       5       1
+            XmlElement.cpp    function                       removeAttrib     306      11       3
+            XmlElement.cpp    function                               main     347      18       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               XmlParser.h   namespace                      XmlProcessing      66      50      52
+               XmlParser.h       class                          XmlParser      70      36      51
+               XmlParser.h    function                               good     106       2       1
+               XmlParser.h    function                         attributes     107       2       1
+               XmlParser.h    function                            verbose     109       6       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlParser.cpp    function                   textFileToString      28       8       1
+             XmlParser.cpp    function                           compress      39      41       8
+             XmlParser.cpp    function                        enquoteText      83      14       2
+             XmlParser.cpp    function                        dequoteText     100       7       1
+             XmlParser.cpp    function                          XmlParser     110       9       1
+             XmlParser.cpp    function                  extractAttributes     122      12       3
+             XmlParser.cpp    function                     showAttributes     137       8       2
+             XmlParser.cpp    function                    createXmlDeclar     148      17       3
+             XmlParser.cpp    function                    createProcInstr     168      17       3
+             XmlParser.cpp    function                      createComment     188      18       3
+             XmlParser.cpp    function                   createTaggedElem     209      18       3
+             XmlParser.cpp    function                     createTextElem     230      11       2
+             XmlParser.cpp    function                     processEndElem     244       7       2
+             XmlParser.cpp    function                      processMarkup     254      38       7
+             XmlParser.cpp    function                        processText     295       5       1
+             XmlParser.cpp    function                      buildDocument     303      27       4
+             XmlParser.cpp    function                               main     337      14       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               XmlReader.h       class                          XmlReader      59      23      21
+               XmlReader.h    function                              reset      82       2       1
+               XmlReader.h    function                           position      84       2       1
+               XmlReader.h    function                                xml      86       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlReader.cpp    function                          XmlReader      16       2       1
+             XmlReader.cpp    function                  extractIdentifier      30      22       3
+             XmlReader.cpp    function                            element      55      58       5
+             XmlReader.cpp    function                               body     116      17       2
+             XmlReader.cpp    function                               next     136      12       2
+             XmlReader.cpp    function                                tag     151       4       1
+             XmlReader.cpp    function                         attributes     158      25       2
+             XmlReader.cpp    function                           position     186       6       1
+             XmlReader.cpp    function                        specialChar      22       5       1
+             XmlReader.cpp    function                               main     198      64       4
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+            XmlUtilities.h   namespace                      XmlProcessing      34      33       6
+            XmlUtilities.h       class                         XmlConvert      37       7       5
+            XmlUtilities.h    function                       toXmlElement      47       7       1
+            XmlUtilities.h    function                     fromXmlElement      57       9       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          XmlUtilities.cpp    function                       toXmlElement      24      13       1
+          XmlUtilities.cpp    function                     fromXmlElement      40      15       1
+          XmlUtilities.cpp       class                             Widget      14       7       1
+              public data: Property < std :: string > name ; 
+              public data: Property < double > pi ; 
+          XmlUtilities.cpp    function                               main      59      25       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+               XmlWriter.h       class                          XmlWriter      58      23      19
+              public data: typedef std :: pair < std :: string , std :: string > attribElem ; 
+               XmlWriter.h    function                          XmlWriter      81       2       1
+               XmlWriter.h    function                                xml      83       2       1
+               XmlWriter.h    function                              clear      86       6       1
+               XmlWriter.h    function                             indent      92       2       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+             XmlWriter.cpp    function                           indentIt      16       5       1
+             XmlWriter.cpp    function                              start      24      11       2
+             XmlWriter.cpp    function                       addAttribute      40      14       3
+             XmlWriter.cpp    function                            addBody      57       8       2
+             XmlWriter.cpp    function                                end      68      11       2
+             XmlWriter.cpp    function                            element      82       6       1
+             XmlWriter.cpp    function                     addDeclaration      93       4       1
+             XmlWriter.cpp    function                         addComment     102       8       2
+             XmlWriter.cpp    function                               mOut     118       3       1
+             XmlWriter.cpp    function                               main     123      85       2
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+          itokcollection.h   namespace                            Scanner      38      25       3
+          itokcollection.h      struct                     ITokCollection      40      22       2
+          itokcollection.h    function                    ~ITokCollection      59       1       1
+          itokcollection.h      struct                     ITokCollection      38      13       2
+          itokcollection.h    function                    ~ITokCollection      48       1       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         xmlElementParts.h       class                           XmlParts      73      23      23
+         xmlElementParts.h    function                           XmlParts      96       2       1
+         xmlElementParts.h    function                             length      98       2       1
+         xmlElementParts.h    function                            verbose     100       2       1
+         xmlElementParts.h    function                              clear     102       2       1
+         xmlElementParts.h    function                          push_back     106       3       1
+
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+       xmlElementParts.cpp    function                           XmlParts      18       2       1
+       xmlElementParts.cpp    function                          ~XmlParts      23       2       1
+       xmlElementParts.cpp    function                       isTerminator      28       7       1
+       xmlElementParts.cpp    function                                get      39      29       5
+       xmlElementParts.cpp    function                         operator[]      71       5       1
+       xmlElementParts.cpp    function                               show      79       9       1
+       xmlElementParts.cpp    function                               find      92       6       1
+       xmlElementParts.cpp    function                             remove     101      10       2
+       xmlElementParts.cpp    function                          trimFront     114       4       1
+       xmlElementParts.cpp    function                            toLower     121       9       3
+       xmlElementParts.cpp    function                               main     136      33       5
+
+                          Functions Exceeding Metric Limits and Public Data
+    ==============================================================================================
+                 file name        type                               name    line    size    cplx
+    -----------------------  ----------  ---------------------------------  ------  ------  ------
+         ActionsAndRules.h    function                           doAction     595      86       6
+         ActionsAndRules.h    function                             doTest     900      74      10
+       ConfigureParser.cpp    function                              Build      89      98       3
+              DateTime.cpp    function                           DateTime      57      28      15
+               Display.cpp    function                               main      16     110       3
+            FileSystem.cpp    function                               main     773     438      31
+        GrammarHelpers.cpp    function              isFirstArgDeclaration     164      54       2
+        GrammarHelpers.cpp    function                               main     594      59      17
+           PersistHelp.cpp    function                               main      66      71       1
+               Queries.cpp    function                               main      18     134       8
+            ScopeStack.cpp    function                               main      49      75       1
+                Server.cpp    function                        readMessage     160      86       9
+               Sockets.cpp    function                            connect     319      63       8
+               Sockets.cpp    function           clientTestBufferHandling     710      57       8
+             Tokenizer.cpp    function                          nextState     192      81      14
+             Tokenizer.cpp    function                               main     666      80       7
+             Tokenizer.cpp    function                               main     329      61       8
+             XmlReader.cpp    function                            element      55      58       5
+             XmlReader.cpp    function                               main     198      64       4
+             XmlWriter.cpp    function                               main     123      85       2
+
+              public data: AbstrSynTree.h : 74 - struct DeclarationNode
+                Scanner :: ITokCollection * pTc = nullptr ; 
+              public data: AbstrSynTree.h : 75 - struct DeclarationNode
+                Access access_ ; 
+              public data: AbstrSynTree.h : 76 - struct DeclarationNode
+                DeclType declType_ ; 
+              public data: AbstrSynTree.h : 77 - struct DeclarationNode
+                std :: string package_ ; 
+              public data: AbstrSynTree.h : 78 - struct DeclarationNode
+                size_t line_ ; 
+              public data: AbstrSynTree.h : 91 - struct ASTNode
+                Type type_ ; 
+              public data: AbstrSynTree.h : 92 - struct ASTNode
+                Type parentType_ ; 
+              public data: AbstrSynTree.h : 93 - struct ASTNode
+                Name name_ ; 
+              public data: AbstrSynTree.h : 94 - struct ASTNode
+                Package package_ ; 
+              public data: AbstrSynTree.h : 95 - struct ASTNode
+                Path path_ ; 
+              public data: AbstrSynTree.h : 96 - struct ASTNode
+                size_t startLineCount_ ; 
+              public data: AbstrSynTree.h : 97 - struct ASTNode
+                size_t endLineCount_ ; 
+              public data: AbstrSynTree.h : 98 - struct ASTNode
+                size_t complexity_ ; 
+              public data: AbstrSynTree.h : 99 - struct ASTNode
+                std :: vector < ASTNode * > children_ ; 
+              public data: AbstrSynTree.h : 100 - struct ASTNode
+                std :: vector < DeclarationNode > decl_ ; 
+              public data: AbstrSynTree.h : 101 - struct ASTNode
+                std :: vector < Scanner :: ITokCollection * > statements_ ; 
+              public data: Child.h : 16 - struct element
+                std :: vector < element > children ; 
+              public data: Child.h : 16 - struct element
+                std :: vector < element > children ; 
+              public data: CppProperties.cpp : 16 - class X
+                Property < std :: string > name ; 
+              public data: CppProperties.cpp : 17 - class X
+                Property < double > isMutable ; 
+              public data: CppProperties.cpp : 18 - class X
+                Property < const double > pi = 3 . 1415927 ; 
+              public data: CppProperties.cpp : 19 - class X
+                Property < const std :: string > constName = "a const name" ; 
+              public data: CppProperties.cpp : 70 - class Y
+                UpperCaseProperty name = "jim" ; 
+              public data: Graph.h : 94 - class Vertex
+                typedef std :: pair < size_t , E > Edge ; 
+              public data: Graph.h : 191 - class Graph
+                typedef std :: pair < size_t , E > Edge ; 
+              public data: Graph.h : 415 - class Display
+                typedef Graph < V , E > graph ; 
+              public data: Graph.h : 416 - class Display
+                typedef Vertex < V , E > vertex ; 
+              public data: Graph.h : 417 - class Display
+                typedef std :: pair < int , E > edge ; 
+              public data: Parser.h : 107 - class IRule
+                static const bool Continue = true ; 
+              public data: Parser.h : 108 - class IRule
+                static const bool Stop = false ; 
+              public data: Persist.h : 58 - class Record
+                Property < Key > key ; 
+              public data: PersistHelp.h : 274 - class NoSQLDBRecord
+                Property < Key > key ; 
+              public data: PersistHelp.h : 298 - class Widget
+                Property < int > wint ; 
+              public data: PersistHelp.h : 299 - class Widget
+                Property < std :: string > wstr ; 
+              public data: ScopeStack.cpp : 26 - struct element
+                std :: string type ; 
+              public data: ScopeStack.cpp : 27 - struct element
+                std :: string name ; 
+              public data: ScopeStack.cpp : 28 - struct element
+                size_t startLineCount = 0 ; 
+              public data: ScopeStack.cpp : 29 - struct element
+                size_t endLineCount = 0 ; 
+              public data: ScopeStack.cpp : 30 - struct element
+                std :: string path_ ; 
+              public data: TestTypes.h : 14 - class SuperHero
+                Property < std :: string > name ; 
+              public data: TestTypes.h : 15 - class SuperHero
+                Property < double > power ; 
+              public data: Tokenizer.cpp : 34 - struct Context
+                std :: string token ; 
+              public data: Tokenizer.cpp : 35 - struct Context
+                std :: istream * _pIn ; 
+              public data: Utilities.h : 60 - class test
+                std :: vector < std :: string > publicVector ; 
+              public data: XmlUtilities.cpp : 18 - class Widget
+                Property < std :: string > name ; 
+              public data: XmlUtilities.cpp : 19 - class Widget
+                Property < double > pi ; 
+              public data: XmlWriter.h : 60 - class XmlWriter
+                typedef std :: pair < std :: string , std :: string > attribElem ; 
